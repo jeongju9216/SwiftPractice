@@ -1,2 +1,2 @@
 # SwiftPractice
-Swift 테스트 공간
+스위프트 테스트 공간
