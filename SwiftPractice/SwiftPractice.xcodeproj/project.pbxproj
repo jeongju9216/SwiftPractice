@@ -23,6 +23,7 @@
 		9B90AB16288AD3C5004B2A06 /* ComputedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputedProperty.swift; sourceTree = "<group>"; };
 		9B90AB1D288B82BB004B2A06 /* PropertyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObserver.swift; sourceTree = "<group>"; };
 		9B90AB20288B9C5A004B2A06 /* TypeProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeProperty.swift; sourceTree = "<group>"; };
+		9B90AB22288C026D004B2A06 /* PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		9B90AB1F288B82C7004B2A06 /* Property */ = {
 			isa = PBXGroup;
 			children = (
+				9B90AB22288C026D004B2A06 /* PropertyWrapper.swift */,
 				9B90AB16288AD3C5004B2A06 /* ComputedProperty.swift */,
 				9B90AB1D288B82BB004B2A06 /* PropertyObserver.swift */,
 				9B90AB20288B9C5A004B2A06 /* TypeProperty.swift */,
@@ -102,6 +104,7 @@
 				TargetAttributes = {
 					9B90AB12288AD3C5004B2A06 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -250,10 +253,17 @@
 		9B90AB1B288AD3C5004B2A06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VPZU4RB4D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -261,9 +271,15 @@
 		9B90AB1C288AD3C5004B2A06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VPZU4RB4D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
