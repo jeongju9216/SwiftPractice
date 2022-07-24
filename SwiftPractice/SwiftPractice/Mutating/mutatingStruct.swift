@@ -7,21 +7,15 @@
 
 import Foundation
 
-enum StateSwitch {
-    case off, low, high
-    mutating func next() {
-        switch self {
-        case .off:
-            self = .low
-        case .low:
-            self = .high
-        case .high:
-            self = .off
-        }
+struct SomeClass {
+    var value: Int = 0
+    
+    mutating func increase() {
+        self.value += 1
     }
 }
 
-var stateSwitch = StateSwitch.off
-print(stateSwitch)
-stateSwitch.next()
-print(stateSwitch)
+var someClass: SomeClass = SomeClass()
+print(someClass.value) //0
+someClass.increase()
+print(someClass.value) //1
