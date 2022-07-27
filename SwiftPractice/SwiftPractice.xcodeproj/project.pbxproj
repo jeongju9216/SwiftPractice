@@ -6,10 +6,6 @@
 	objectVersion = 55;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		9B90AB2C288D3E8C004B2A06 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B90AB2B288D3E8C004B2A06 /* main.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		9B90AB11288AD3C5004B2A06 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -31,7 +27,7 @@
 		9B90AB24288D2E6D004B2A06 /* mutatingStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mutatingStruct.swift; sourceTree = "<group>"; };
 		9B90AB27288D3655004B2A06 /* mutatingEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mutatingEnum.swift; sourceTree = "<group>"; };
 		9B90AB29288D387B004B2A06 /* Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscript.swift; sourceTree = "<group>"; };
-		9B90AB2B288D3E8C004B2A06 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9B90AB2B288D3E8C004B2A06 /* PropertyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +60,10 @@
 		9B90AB15288AD3C5004B2A06 /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9B90AB2E28900B46004B2A06 /* Initialization */,
+				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
 				9B90AB1F288B82C7004B2A06 /* Property */,
-				9B90AB29288D387B004B2A06 /* Subscript.swift */,
-				9B90AB2B288D3E8C004B2A06 /* main.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -90,6 +86,22 @@
 				9B90AB27288D3655004B2A06 /* mutatingEnum.swift */,
 			);
 			path = Mutating;
+			sourceTree = "<group>";
+		};
+		9B90AB2D28900913004B2A06 /* Subscript */ = {
+			isa = PBXGroup;
+			children = (
+				9B90AB29288D387B004B2A06 /* Subscript.swift */,
+			);
+			path = Subscript;
+			sourceTree = "<group>";
+		};
+		9B90AB2E28900B46004B2A06 /* Initialization */ = {
+			isa = PBXGroup;
+			children = (
+				9B90AB2B288D3E8C004B2A06 /* PropertyObserver.swift */,
+			);
+			path = Initialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +163,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B90AB2C288D3E8C004B2A06 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
