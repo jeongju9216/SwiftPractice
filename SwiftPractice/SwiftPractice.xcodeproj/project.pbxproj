@@ -28,6 +28,7 @@
 		9B90AB27288D3655004B2A06 /* mutatingEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mutatingEnum.swift; sourceTree = "<group>"; };
 		9B90AB29288D387B004B2A06 /* Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscript.swift; sourceTree = "<group>"; };
 		9B90AB2B288D3E8C004B2A06 /* PropertyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObserver.swift; sourceTree = "<group>"; };
+		9BF206BD2893B50D00820C6E /* async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = async.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		9B90AB15288AD3C5004B2A06 /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9BF206BF2893B50F00820C6E /* Concurrency */,
 				9B90AB2E28900B46004B2A06 /* Initialization */,
 				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
@@ -102,6 +104,14 @@
 				9B90AB2B288D3E8C004B2A06 /* PropertyObserver.swift */,
 			);
 			path = Initialization;
+			sourceTree = "<group>";
+		};
+		9BF206BF2893B50F00820C6E /* Concurrency */ = {
+			isa = PBXGroup;
+			children = (
+				9BF206BD2893B50D00820C6E /* async.swift */,
+			);
+			path = Concurrency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
