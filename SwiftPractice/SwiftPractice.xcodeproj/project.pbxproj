@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9BF206D52896A99800820C6E /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206D42896A99800820C6E /* protocol.swift */; };
-		9BF206DE289809A500820C6E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206DD289809A500820C6E /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,9 @@
 		9B90AB2B288D3E8C004B2A06 /* PropertyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyObserver.swift; sourceTree = "<group>"; };
 		9BF206BD2893B50D00820C6E /* async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = async.swift; sourceTree = "<group>"; };
 		9BF206D42896A99800820C6E /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
-		9BF206DD289809A500820C6E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9BF206DD289809A500820C6E /* SerialConcurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialConcurrent.swift; sourceTree = "<group>"; };
+		9BF206FE289CEF1A00820C6E /* SyncAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAsync.swift; sourceTree = "<group>"; };
+		9BF20700289CFDED00820C6E /* Deadlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deadlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +76,6 @@
 				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
 				9B90AB1F288B82C7004B2A06 /* Property */,
-				9BF206DD289809A500820C6E /* main.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -135,6 +135,9 @@
 		9BF206FD289CDFC000820C6E /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				9BF206DD289809A500820C6E /* SerialConcurrent.swift */,
+				9BF206FE289CEF1A00820C6E /* SyncAsync.swift */,
+				9BF20700289CFDED00820C6E /* Deadlock.swift */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -198,7 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF206DE289809A500820C6E /* main.swift in Sources */,
 				9BF206D52896A99800820C6E /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
