@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BF206D52896A99800820C6E /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206D42896A99800820C6E /* protocol.swift */; };
+		9BFCBAA728A48A9900B52A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBAA628A48A9900B52A7C /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		9BFCBA9D28A3998D00B52A7C /* ProtocolDispatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDispatch.swift; sourceTree = "<group>"; };
 		9BFCBA9F28A3A1A400B52A7C /* finalKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalKeyword.swift; sourceTree = "<group>"; };
 		9BFCBAA128A3A31A00B52A7C /* privateKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privateKeyword.swift; sourceTree = "<group>"; };
+		9BFCBAA328A481E000B52A7C /* InferenceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InferenceAnnotation.swift; sourceTree = "<group>"; };
+		9BFCBAA628A48A9900B52A7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 		9B90AB15288AD3C5004B2A06 /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9BFCBAA528A48A8600B52A7C /* InferenceAnnotation */,
 				9BFCBA9A28A38A6500B52A7C /* MethodDispatch */,
 				9BF206FD289CDFC000820C6E /* GCD */,
 				9BF206D62896A99900820C6E /* Protocols */,
@@ -84,6 +88,7 @@
 				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
 				9B90AB1F288B82C7004B2A06 /* Property */,
+				9BFCBAA628A48A9900B52A7C /* main.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -164,6 +169,14 @@
 			path = MethodDispatch;
 			sourceTree = "<group>";
 		};
+		9BFCBAA528A48A8600B52A7C /* InferenceAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				9BFCBAA328A481E000B52A7C /* InferenceAnnotation.swift */,
+			);
+			path = InferenceAnnotation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFCBAA728A48A9900B52A7C /* main.swift in Sources */,
 				9BF206D52896A99800820C6E /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
