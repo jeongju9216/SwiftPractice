@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9BF206D52896A99800820C6E /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206D42896A99800820C6E /* protocol.swift */; };
-		9BFCBAE928A6332600B52A7C /* UserDefaults5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBAE828A6332600B52A7C /* UserDefaults5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +51,11 @@
 		9BFCBAE428A62D4300B52A7C /* UserDefaults3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults3.swift; sourceTree = "<group>"; };
 		9BFCBAE628A6321C00B52A7C /* UserDefaults4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults4.swift; sourceTree = "<group>"; };
 		9BFCBAE828A6332600B52A7C /* UserDefaults5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults5.swift; sourceTree = "<group>"; };
+		9BFCBAEC28A79BED00B52A7C /* Hashable1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashable1.swift; sourceTree = "<group>"; };
+		9BFCBAEF28A8988900B52A7C /* structHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structHashable.swift; sourceTree = "<group>"; };
+		9BFCBAF128A89BC500B52A7C /* classHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classHashable.swift; sourceTree = "<group>"; };
+		9BFCBAF328A89E4B00B52A7C /* classHashable2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classHashable2.swift; sourceTree = "<group>"; };
+		9BFCBAF528A8A13900B52A7C /* structHashable2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structHashable2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		9B90AB15288AD3C5004B2A06 /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9BFCBAEE28A8952C00B52A7C /* Hashable */,
 				9BFCBAE128A6278C00B52A7C /* UserDefaults */,
 				9BFCBAA528A48A8600B52A7C /* InferenceAnnotation */,
 				9BFCBA9A28A38A6500B52A7C /* MethodDispatch */,
@@ -195,6 +200,18 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		9BFCBAEE28A8952C00B52A7C /* Hashable */ = {
+			isa = PBXGroup;
+			children = (
+				9BFCBAEC28A79BED00B52A7C /* Hashable1.swift */,
+				9BFCBAEF28A8988900B52A7C /* structHashable.swift */,
+				9BFCBAF528A8A13900B52A7C /* structHashable2.swift */,
+				9BFCBAF128A89BC500B52A7C /* classHashable.swift */,
+				9BFCBAF328A89E4B00B52A7C /* classHashable2.swift */,
+			);
+			path = Hashable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF206D52896A99800820C6E /* protocol.swift in Sources */,
-				9BFCBAE928A6332600B52A7C /* UserDefaults5.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
