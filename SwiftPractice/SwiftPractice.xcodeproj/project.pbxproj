@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BF206D52896A99800820C6E /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206D42896A99800820C6E /* protocol.swift */; };
-		9BFCBB5528B2702E00B52A7C /* GCD우선순위_역전.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */; };
+		9BFCBB5528B2702E00B52A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBB5428B2702E00B52A7C /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,7 +66,7 @@
 		9BFCBB4A28B2117800B52A7C /* NSCopying1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCopying1.swift; sourceTree = "<group>"; };
 		9BFCBB4C28B21CEA00B52A7C /* NSCopying2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCopying2.swift; sourceTree = "<group>"; };
 		9BFCBB4E28B21F1100B52A7C /* StructCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCopy.swift; sourceTree = "<group>"; };
-		9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GCD우선순위_역전.swift"; sourceTree = "<group>"; };
+		9BFCBB5428B2702E00B52A7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
 				9B90AB1F288B82C7004B2A06 /* Property */,
-				9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */,
+				9BFCBB5428B2702E00B52A7C /* main.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFCBB5528B2702E00B52A7C /* GCD우선순위_역전.swift in Sources */,
+				9BFCBB5528B2702E00B52A7C /* main.swift in Sources */,
 				9BF206D52896A99800820C6E /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
