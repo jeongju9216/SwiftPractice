@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BF206D52896A99800820C6E /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF206D42896A99800820C6E /* protocol.swift */; };
-		9BFCBB4028AF716800B52A7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBB3F28AF716800B52A7C /* main.swift */; };
+		9BFCBB5528B2702E00B52A7C /* GCD우선순위_역전.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,7 +61,12 @@
 		9BFCBB1028AD106C00B52A7C /* DispatchWallTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchWallTime.swift; sourceTree = "<group>"; };
 		9BFCBB1B28AF110600B52A7C /* GCD_우선순위_역전.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GCD_우선순위_역전.swift"; sourceTree = "<group>"; };
 		9BFCBB3D28AF6EA500B52A7C /* Concurrency_우선순위.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Concurrency_우선순위.swift"; sourceTree = "<group>"; };
-		9BFCBB3F28AF716800B52A7C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9BFCBB3F28AF716800B52A7C /* ValueTypeCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTypeCopy.swift; sourceTree = "<group>"; };
+		9BFCBB4828B2103A00B52A7C /* ReferenceTypeCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceTypeCopy.swift; sourceTree = "<group>"; };
+		9BFCBB4A28B2117800B52A7C /* NSCopying1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCopying1.swift; sourceTree = "<group>"; };
+		9BFCBB4C28B21CEA00B52A7C /* NSCopying2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSCopying2.swift; sourceTree = "<group>"; };
+		9BFCBB4E28B21F1100B52A7C /* StructCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructCopy.swift; sourceTree = "<group>"; };
+		9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GCD우선순위_역전.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 		9B90AB15288AD3C5004B2A06 /* SwiftPractice */ = {
 			isa = PBXGroup;
 			children = (
+				9BFCBB4728B2102600B52A7C /* Copy */,
 				9BFCBAEE28A8952C00B52A7C /* Hashable */,
 				9BFCBAE128A6278C00B52A7C /* UserDefaults */,
 				9BFCBAA528A48A8600B52A7C /* InferenceAnnotation */,
@@ -105,7 +111,7 @@
 				9B90AB2D28900913004B2A06 /* Subscript */,
 				9B90AB26288D3642004B2A06 /* Mutating */,
 				9B90AB1F288B82C7004B2A06 /* Property */,
-				9BFCBB3F28AF716800B52A7C /* main.swift */,
+				9BFCBB5428B2702E00B52A7C /* GCD우선순위_역전.swift */,
 			);
 			path = SwiftPractice;
 			sourceTree = "<group>";
@@ -223,6 +229,18 @@
 			path = Hashable;
 			sourceTree = "<group>";
 		};
+		9BFCBB4728B2102600B52A7C /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				9BFCBB3F28AF716800B52A7C /* ValueTypeCopy.swift */,
+				9BFCBB4828B2103A00B52A7C /* ReferenceTypeCopy.swift */,
+				9BFCBB4A28B2117800B52A7C /* NSCopying1.swift */,
+				9BFCBB4C28B21CEA00B52A7C /* NSCopying2.swift */,
+				9BFCBB4E28B21F1100B52A7C /* StructCopy.swift */,
+			);
+			path = Copy;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,7 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFCBB4028AF716800B52A7C /* main.swift in Sources */,
+				9BFCBB5528B2702E00B52A7C /* GCD우선순위_역전.swift in Sources */,
 				9BF206D52896A99800820C6E /* protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
