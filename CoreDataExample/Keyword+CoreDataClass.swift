@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Phone)
-public class Phone: NSManagedObject {
+@objc(Keyword)
+public class Keyword: NSManagedObject {
 
 }

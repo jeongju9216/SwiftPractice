@@ -8,9 +8,12 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     var container: NSPersistentContainer!
+    var viewContext: NSManagedObjectContext!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,27 +21,39 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.container = appDelegate.persistentContainer
+        self.viewContext = container.viewContext
         
-        savePhoneData(name: "시리",
-                      phoneNumber: "010-0000-0000")
-        
+        setupSearchBar()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismissKeyboard()
+    }
+    
+    //MARK: - Actions
+    @IBAction func clickedButton(_ sender: UIButton) {
         fetchContact()
     }
-
-    func savePhoneData(name: String, phoneNumber: String) {
-        let entity = NSEntityDescription.entity(forEntityName: "Phone", in: self.container.viewContext)
+    
+    //MARK: - Methods
+    func setupSearchBar() {
+        searchBar.placeholder = "검색하세요."
+        searchBar.delegate = self
+    }
+    
+    func saveKeyword(keyword: String) {
+        let entity = NSEntityDescription.entity(forEntityName: "Keyword", in: self.viewContext)
         
         guard let entity = entity else {
             return
         }
         
-        let phone = NSManagedObject(entity: entity, insertInto: self.container.viewContext)
-        phone.setValue(name, forKey: "name")
-        phone.setValue(phoneNumber, forKey: "phoneNumber")
-        phone.setValue(Date(), forKey: "createdAt")
+        let object = NSManagedObject(entity: entity, insertInto: self.viewContext)
+        object.setValue(keyword, forKey: "keyword")
+        object.setValue(Date(), forKey: "createdAt")
         
         do {
-            try self.container.viewContext.save()
+            try self.viewContext.save()
         } catch {
             print(error.localizedDescription)
         }
@@ -49,7 +64,7 @@ class ViewController: UIViewController {
         print("current Date: \(date)")
         
         do {
-            let contact = try self.container.viewContext.fetch(Phone.fetchRequest()) as! [Phone]
+            let contact = try self.container.viewContext.fetch(Keyword.fetchRequest()) as! [Keyword]
             
             for data in contact {
                 let distanceSecond: DateComponents = Calendar.current.dateComponents([.minute, .second], from: data.createdAt!, to: date)
@@ -58,7 +73,7 @@ class ViewController: UIViewController {
                     print("Delete!!")
                     self.container.viewContext.delete(data)
                 } else {
-                    print("name: \(data.name) / number: \(data.phoneNumber) / createdAt: \(data.createdAt)")
+                    print("keyword: \(data.keyword) / createdAt: \(data.createdAt)")
                 }
             }
             
@@ -69,3 +84,44 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UISearchBarDelegate {
+    //텍스트 입력을 시작할 때
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    //텍스트가 변경될 때
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let text = searchBar.text else {
+            return
+        }
+        
+        print("Input: \(text)")
+    }
+    
+    //검색 버튼을 눌렀을 때
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismissKeyboard()
+
+        guard let text = searchBar.text else {
+            return
+        }
+        
+        print("Search: \(text)")
+        
+        saveKeyword(keyword: text)
+    }
+    
+    //취소 버튼을 눌렀을 때
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        dismissKeyboard()
+        
+        self.searchBar.text = ""
+    }
+    
+    //키보드 숨기기
+    private func dismissKeyboard() {
+        self.searchBar.resignFirstResponder()
+        self.searchBar.setShowsCancelButton(false, animated: true)
+    }
+}
