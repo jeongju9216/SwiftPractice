@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,23 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uID-za-Pb4">
-                                <rect key="frame" x="143.66666666666666" y="408.66666666666669" width="106" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Data"/>
-                                <connections>
-                                    <action selector="clickedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pgx-H3-boo"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vjB-KJ-FFO">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewLayout key="collectionViewLayout" id="cBp-lg-8tW"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KeywordCollectionViewCell" id="PwM-c8-tGN">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lwj-Ro-vtK">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uID-za-Pb4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXL-D0-dIe"/>
-                            <constraint firstItem="uID-za-Pb4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pOn-7j-fvr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vjB-KJ-FFO" secondAttribute="trailing" id="1tr-xx-H2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vjB-KJ-FFO" secondAttribute="bottom" id="cG1-4y-Sa7"/>
+                            <constraint firstItem="vjB-KJ-FFO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dER-Z4-Sp0"/>
+                            <constraint firstItem="vjB-KJ-FFO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xOC-ut-NYm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="검색" largeTitleDisplayMode="always" id="Izo-Em-dkN"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vjB-KJ-FFO" id="wnI-vG-awh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
