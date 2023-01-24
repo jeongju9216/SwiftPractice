@@ -13,8 +13,8 @@ final class ViewController: UIViewController {
     var container: NSPersistentContainer!
     var viewContext: NSManagedObjectContext!
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    
+    private let searchController: UISearchController = UISearchController()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +22,8 @@ final class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.container = appDelegate.persistentContainer
         self.viewContext = container.viewContext
+        
+        navigationItem.searchController = self.searchController
         
         setupSearchBar()
     }
@@ -37,8 +39,8 @@ final class ViewController: UIViewController {
     
     //MARK: - Methods
     func setupSearchBar() {
-        searchBar.placeholder = "검색하세요."
-        searchBar.delegate = self
+        searchController.searchBar.placeholder = "검색하세요."
+        searchController.searchBar.delegate = self
     }
     
     func saveKeyword(keyword: String) {
@@ -87,7 +89,7 @@ final class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
     //텍스트 입력을 시작할 때
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        self.searchBar.setShowsCancelButton(true, animated: true)
+        self.searchController.searchBar.setShowsCancelButton(true, animated: true)
     }
     
     //텍스트가 변경될 때
@@ -116,12 +118,12 @@ extension ViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dismissKeyboard()
         
-        self.searchBar.text = ""
+        self.searchController.searchBar.text = ""
     }
     
     //키보드 숨기기
     private func dismissKeyboard() {
-        self.searchBar.resignFirstResponder()
-        self.searchBar.setShowsCancelButton(false, animated: true)
+        self.searchController.searchBar.resignFirstResponder()
+        self.searchController.searchBar.setShowsCancelButton(false, animated: true)
     }
 }
