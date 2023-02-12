@@ -29,9 +29,6 @@ class ViewController: UIViewController {
 
     var dataSource: DataSource?
     
-    private let serialQueue = DispatchQueue(label: "Serial")
-    private var isReset: Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,47 +38,8 @@ class ViewController: UIViewController {
         self.configureDataSource()
         self.configureSnapShot()
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(collectionViewTapped(_:)))
-        collectionView.addGestureRecognizer(tap)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        collectionView.delegate = self
         
-        autoScroll()
-        print("frame width: \(collectionView.frame.width)")
-    }
-    
-    func autoScroll () {
-        let co = collectionView.contentOffset.x
-        let no = co + 10
-        
-        print("no: \(no)")
-//
-//        UIView.animate(withDuration: 0.1, delay: 0, options: [.allowUserInteraction], animations: { [weak self] () -> Void in
-//            guard let self = self else { return }
-//            
-//            self.collectionView.contentOffset = CGPoint(x: no, y: 0)
-//        }) { [weak self] _ in
-//            guard let self = self else { return }
-//            
-//            if self.collectionView.contentOffset.x >= 180 * (CGFloat(self.list.count)) {
-//                self.collectionView.contentOffset = .init(x: 0, y: 0)
-//            }
-//            
-//            if !self.isReset {
-//                self.autoScroll()
-//            }
-//        }
-    }
-    
-    @objc func collectionViewTapped(_ sender: UIView) {
-        print("Tap: \(isReset)")
-        isReset.toggle()
-        print("collectionView.contentOffset.x: \(collectionView.contentOffset.x)")
-        if !isReset {
-            autoScroll()
-        }
     }
 
     private func bindSnapShotApply(section: Section, item: [Model]) {
@@ -94,7 +52,7 @@ class ViewController: UIViewController {
             
             self.dataSource?.apply(snapShot, animatingDifferences: true) { [weak self] in
                 self?.collectionView.scrollToItem(at: [0, 0],
-                                                  at: .left,
+                                                  at: .centeredHorizontally,
                                                   animated: false)
             }
         }
@@ -153,7 +111,7 @@ class ViewController: UIViewController {
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .absolute(180),
                                                                 heightDimension: .absolute(180)))
-            item.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
+            item.contentInsets = .init(top: 10, leading: 10, bottom: 10, trailing: 10)
             
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(180),
                                                                              heightDimension: .absolute(180)),
@@ -162,14 +120,30 @@ class ViewController: UIViewController {
             let section = NSCollectionLayoutSection(group: group)
             section.orthogonalScrollingBehavior = .continuous
             
-            section.visibleItemsInvalidationHandler = {(item, offset, env) in
+            section.visibleItemsInvalidationHandler = { [weak self] (item, offset, env) in
+                guard let self = self else { return }
+                
                 let index = Int(ceil(offset.x / env.container.contentSize.width))
                 
-                print(">>>> \(index)")
+                if offset.x >= CGFloat(180 * (self.list.count)) {
+                    self.collectionView.scrollToItem(at: [0, 0], at: .centeredHorizontally, animated: false)
+                }
             }
             
             return section
         }
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let model = dataSource?.itemIdentifier(for: indexPath) {
+            print("model: \(model.number)")
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scroll: \(scrollView.contentOffset.x)")
     }
 }
 

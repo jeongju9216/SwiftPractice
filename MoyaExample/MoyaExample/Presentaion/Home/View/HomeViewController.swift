@@ -9,7 +9,6 @@ import UIKit
 import Moya
 
 final class HomeViewController: UIViewController {    
-    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +16,7 @@ final class HomeViewController: UIViewController {
         print("HomeViewController")
         
         testFree()
+        testPaid()
     }
     
     //MARK: - Methods
@@ -35,14 +35,12 @@ final class HomeViewController: UIViewController {
                     let topRankAppDTOes: [TopRankAppDTO] = decoded.feed?.results ?? []
                     let topRankApps: [TopRankApp] = topRankAppDTOes.map { $0.toEntity() }
 
-                    print("==== Home Result ====")
+                    print("==== Free Result ====")
                     var topRankAppNames: String = ""
                     for topRankApp in topRankApps {
                         topRankAppNames += "\(topRankApp.name ?? "")\n"
                     }
                     print(topRankAppNames)
-                    
-                    self.label.text = topRankAppNames
                 } catch {
                     print(error)
                 }
@@ -51,4 +49,35 @@ final class HomeViewController: UIViewController {
             }
         }
     }
+    
+    private func testPaid() {
+        let provider = MoyaProvider<TopRankTargetType>()
+        provider.request(.paid()) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            
+            switch result {
+            case .success(let response):
+                do {
+                    let decoded = try JSONDecoder().decode(TopRankDTO.self, from: response.data)
+                    
+                    let topRankAppDTOes: [TopRankAppDTO] = decoded.feed?.results ?? []
+                    let topRankApps: [TopRankApp] = topRankAppDTOes.map { $0.toEntity() }
+
+                    print("==== Paid Result ====")
+                    var topRankAppNames: String = ""
+                    for topRankApp in topRankApps {
+                        topRankAppNames += "\(topRankApp.name ?? "")\n"
+                    }
+                    print(topRankAppNames)
+                } catch {
+                    print(error)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
 }
