@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private let itemSize: CGFloat = 180
     private let list = (1...10).map { $0 }
 
     enum Section: Int, CaseIterable {
@@ -39,7 +40,6 @@ class ViewController: UIViewController {
         self.configureSnapShot()
         
         collectionView.delegate = self
-        
     }
 
     private func bindSnapShotApply(section: Section, item: [Model]) {
@@ -66,10 +66,11 @@ class ViewController: UIViewController {
         self.dataSource?.apply(snapShot, animatingDifferences: true)
         
         var listItem: [Model] = []
-        for _ in 0..<2 {
-            for item in list {
-                listItem.append(Model(number: item))
-            }
+        for item in list {
+            listItem.append(Model(number: item))
+        }
+        for i in 0..<(min(list.count, 3)) {
+            listItem.append(Model(number: i))
         }
         
         self.bindSnapShotApply(section: .Main, item: listItem)
@@ -108,13 +109,15 @@ class ViewController: UIViewController {
     }
     
     private func configureCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .absolute(180),
-                                                                heightDimension: .absolute(180)))
+        return UICollectionViewCompositionalLayout { [weak self] (sectionNumber, env) -> NSCollectionLayoutSection? in
+            guard let self = self else { return .list(using: .init(appearance: .plain), layoutEnvironment: env) }
+            
+            let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .absolute(self.itemSize),
+                                                                heightDimension: .absolute(self.itemSize)))
             item.contentInsets = .init(top: 10, leading: 10, bottom: 10, trailing: 10)
             
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(180),
-                                                                             heightDimension: .absolute(180)),
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(self.itemSize),
+                                                                             heightDimension: .absolute(self.itemSize)),
                                                            subitems: [item])
             
             let section = NSCollectionLayoutSection(group: group)
@@ -125,7 +128,8 @@ class ViewController: UIViewController {
                 
                 let index = Int(ceil(offset.x / env.container.contentSize.width))
                 
-                if offset.x >= CGFloat(180 * (self.list.count)) {
+                print("In Visible: \(offset.x)")
+                if offset.x >= self.itemSize * CGFloat(self.list.count) {
                     self.collectionView.scrollToItem(at: [0, 0], at: .centeredHorizontally, animated: false)
                 }
             }
@@ -140,10 +144,6 @@ extension ViewController: UICollectionViewDelegate {
         if let model = dataSource?.itemIdentifier(for: indexPath) {
             print("model: \(model.number)")
         }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scroll: \(scrollView.contentOffset.x)")
     }
 }
 
