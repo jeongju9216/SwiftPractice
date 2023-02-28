@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
 
     private let itemSize: CGFloat = 180
     private let list = (1...10).map { $0 }
+    var oneCycleWidth: CGFloat = 0
+    
+    var scrollCount: CGFloat = 0, preScrollX: CGFloat = 0
 
     enum Section: Int, CaseIterable {
         case Main
@@ -29,6 +33,14 @@ class ViewController: UIViewController {
     }()
 
     var dataSource: DataSource?
+
+    private var goFirstTimeStamp: TimeInterval = Date().timeIntervalSinceNow
+    private var goLastTimeStamp: TimeInterval = Date().timeIntervalSince1970
+    
+    var skipCount: Int = 0
+    
+    var scrollPosition: CGFloat = 0
+    var cancellable: Cancellable?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +52,34 @@ class ViewController: UIViewController {
         self.configureSnapShot()
         
         collectionView.delegate = self
+        
+//        self.startTimer()
+        
+        oneCycleWidth = CGFloat(self.list.count) * self.itemSize
+        print("oneCycleWidth: \(oneCycleWidth)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
+    private func startTimer() {
+        cancellable = Timer.publish(every: 0.1, on: .current, in: .default)
+            .autoconnect()
+            .sink { [weak self] receiveValue in
+                guard let self = self else { return }
+                
+                let newOffset = CGPoint(x: self.collectionView.contentOffset.x + 1, y: self.collectionView.contentOffset.y)
+                
+                self.collectionView.setContentOffset(newOffset, animated: true)
+            }
+    }
+    
+    private func autoScroll() {
+//        scrollPosition += 10
+        let newOffset = CGPoint(x: self.collectionView.contentOffset.x + 10, y: self.collectionView.contentOffset.y)
+        
+        self.collectionView.setContentOffset(newOffset, animated: true)
     }
 
     private func bindSnapShotApply(section: Section, item: [Model]) {
@@ -52,7 +92,7 @@ class ViewController: UIViewController {
             
             self.dataSource?.apply(snapShot, animatingDifferences: true) { [weak self] in
                 self?.collectionView.scrollToItem(at: [0, 0],
-                                                  at: .centeredHorizontally,
+                                                  at: .left,
                                                   animated: false)
             }
         }
@@ -66,11 +106,12 @@ class ViewController: UIViewController {
         self.dataSource?.apply(snapShot, animatingDifferences: true)
         
         var listItem: [Model] = []
-        for item in list {
-            listItem.append(Model(number: item))
-        }
-        for i in 0..<(min(list.count, 3)) {
-            listItem.append(Model(number: i))
+        var count: Int = 0
+        for _ in 0..<3 {
+            for item in list {
+                listItem.append(Model(number: item))
+                count += 1
+            }
         }
         
         self.bindSnapShotApply(section: .Main, item: listItem)
@@ -100,11 +141,12 @@ class ViewController: UIViewController {
     private func configureView() {
         self.view.addSubview(self.collectionView)
         
+        self.collectionView.backgroundColor = .lightGray
         NSLayoutConstraint.activate([
-            self.collectionView.heightAnchor.constraint(equalToConstant: 200),
             self.collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+            self.collectionView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
     }
     
@@ -126,15 +168,58 @@ class ViewController: UIViewController {
             section.visibleItemsInvalidationHandler = { [weak self] (item, offset, env) in
                 guard let self = self else { return }
                 
-                let index = Int(ceil(offset.x / env.container.contentSize.width))
+                //                let index = Int(ceil(offset.x / env.container.contentSize.width))
                 
-                print("In Visible: \(offset.x)")
-                if offset.x >= self.itemSize * CGFloat(self.list.count) {
-                    self.collectionView.scrollToItem(at: [0, 0], at: .centeredHorizontally, animated: false)
-                }
+                self.skipScroll(offsetX: offset.x)
             }
             
             return section
+        }
+    }
+    
+    private func skipScroll(offsetX: CGFloat) {
+        let diff = offsetX - preScrollX
+        
+        self.preScrollX = offsetX
+        
+        let scrollCheckTime = Date().timeIntervalSince1970
+
+        if abs(scrollCheckTime - goFirstTimeStamp) > 1 && abs(scrollCheckTime - goLastTimeStamp) > 1 {
+            self.scrollCount += diff
+        }
+        print("scrollCount: \(scrollCount) / skipCount: \(skipCount)")
+
+        if diff > 0 {
+            if offsetX - itemSize >= oneCycleWidth * 2 {
+//                print("Check GO First")
+                let newTimeStamp = Date().timeIntervalSince1970
+                let diffTime = abs(newTimeStamp - goLastTimeStamp)
+                print("diffTime: \(diffTime) / skipCount: \(skipCount)")
+                
+                if diffTime > 1 && skipCount >= 0 {
+                    print("GO First")
+                    skipCount += 1
+                    
+                    goFirstTimeStamp = newTimeStamp
+                    collectionView.scrollToItem(at: [0, list.count], at: .left, animated: false)
+                }
+            }
+        } else {
+            if scrollCount > oneCycleWidth && offsetX - itemSize >= oneCycleWidth * 2 {
+//                print("Check GO Last")
+                
+                let newTimeStamp = Date().timeIntervalSince1970
+                let diffTime = abs(newTimeStamp - goFirstTimeStamp)
+                print("diffTime: \(diffTime) / skipCount: \(skipCount)")
+                
+                if diffTime > 1 && skipCount > 0  {
+                    print("GO Last")
+                    skipCount -= 1
+                    
+                    goLastTimeStamp = newTimeStamp
+                    collectionView.scrollToItem(at: [0, list.count * 2], at: .left, animated: false)
+                }
+            }
         }
     }
 }
