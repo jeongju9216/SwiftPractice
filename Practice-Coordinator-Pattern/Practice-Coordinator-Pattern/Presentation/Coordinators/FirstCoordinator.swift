@@ -25,7 +25,7 @@ final class FirstCoordinator: Coordinator {
     }
     
     func finished(child: Coordinator) {
-        print("finished: \(child)")
+        print("finished: Second Coordinator 삭제")
         childCoordinators = childCoordinators.filter { $0 !== child }
     }
     

@@ -17,12 +17,11 @@ final class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("HERE")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        print("SecondVC 사라짐")
         delegate?.didFinish()
     }
 }

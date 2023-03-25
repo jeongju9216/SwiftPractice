@@ -17,11 +17,10 @@ final class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("delegate is nil? \(delegate == nil)")
     }
     
     @IBAction func clickedPushSecondButton(_ sender: UIButton) {
-        print("clickedPushSecondButton: \(delegate == nil)")
+        print("버튼 클릭")
         delegate?.navigateToSecond()
     }
 }
