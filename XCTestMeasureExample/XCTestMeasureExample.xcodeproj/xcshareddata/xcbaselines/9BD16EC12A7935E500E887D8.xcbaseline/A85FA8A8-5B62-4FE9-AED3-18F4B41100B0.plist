@@ -6,6 +6,16 @@
 	<dict>
 		<key>XCTestMeasureExampleTests</key>
 		<dict>
+			<key>test_cpu()</key>
+			<dict>
+				<key>com.apple.dt.XCTMetric_CPU.instructions_retired</key>
+				<dict>
+					<key>baselineAverage</key>
+					<real>7980000.000000</real>
+					<key>baselineIntegrationDisplayName</key>
+					<string>Local Baseline</string>
+				</dict>
+			</dict>
 			<key>test_time_1()</key>
 			<dict>
 				<key>com.apple.XCTPerformanceMetric_WallClockTime</key>

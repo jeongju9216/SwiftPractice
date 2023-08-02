@@ -26,7 +26,6 @@ final class XCTestMeasureExampleTests: XCTestCase {
     }
 
     func test_time_1() throws {
-        var count = 0
         measure {
             excuteRemoveFirst()
         }
@@ -49,7 +48,8 @@ final class XCTestMeasureExampleTests: XCTestCase {
     
     func test_memory() throws {
         measure(metrics: [XCTMemoryMetric()]) {
-            excuteRemoveFirst()
+            let array = Array(repeating: 0, count: 100_000)
+            print(array.count)
         }
     }
     
@@ -68,9 +68,8 @@ final class XCTestMeasureExampleTests: XCTestCase {
     func test_all() throws {
         measure(metrics: [
             XCTClockMetric(),
-            XCTCPUMetric(),
-            XCTStorageMetric(),
-            XCTMemoryMetric()
+            XCTMemoryMetric(),
+            XCTCPUMetric()
         ]) {
             excuteRemoveFirst()
         }

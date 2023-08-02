@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9BD16EB82A7935C800E887D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16EB72A7935C800E887D8 /* main.swift */; };
-		9BD16EC52A7935E500E887D8 /* XCTestMeasureExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16EC42A7935E500E887D8 /* XCTestMeasureExampleTests.swift */; };
-		9BD16EC92A79372800E887D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16EB72A7935C800E887D8 /* main.swift */; };
+		9BD16ED12A79D0BE00E887D8 /* XCTestMeasureExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16ED02A79D0BE00E887D8 /* XCTestMeasureExampleTests.swift */; };
+		9BD16ED52A79D15C00E887D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD16EB72A7935C800E887D8 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +27,8 @@
 /* Begin PBXFileReference section */
 		9BD16EB42A7935C800E887D8 /* XCTestMeasureExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCTestMeasureExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BD16EB72A7935C800E887D8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		9BD16EC22A7935E500E887D8 /* XCTestMeasureExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTestMeasureExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BD16EC42A7935E500E887D8 /* XCTestMeasureExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestMeasureExampleTests.swift; sourceTree = "<group>"; };
+		9BD16ECE2A79D0BE00E887D8 /* XCTestMeasureExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTestMeasureExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD16ED02A79D0BE00E887D8 /* XCTestMeasureExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestMeasureExampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BD16EBF2A7935E500E887D8 /* Frameworks */ = {
+		9BD16ECB2A79D0BE00E887D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD16EB62A7935C800E887D8 /* XCTestMeasureExample */,
-				9BD16EC32A7935E500E887D8 /* XCTestMeasureExampleTests */,
+				9BD16ECF2A79D0BE00E887D8 /* XCTestMeasureExampleTests */,
 				9BD16EB52A7935C800E887D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9BD16EB42A7935C800E887D8 /* XCTestMeasureExample */,
-				9BD16EC22A7935E500E887D8 /* XCTestMeasureExampleTests.xctest */,
+				9BD16ECE2A79D0BE00E887D8 /* XCTestMeasureExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,10 +75,10 @@
 			path = XCTestMeasureExample;
 			sourceTree = "<group>";
 		};
-		9BD16EC32A7935E500E887D8 /* XCTestMeasureExampleTests */ = {
+		9BD16ECF2A79D0BE00E887D8 /* XCTestMeasureExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BD16EC42A7935E500E887D8 /* XCTestMeasureExampleTests.swift */,
+				9BD16ED02A79D0BE00E887D8 /* XCTestMeasureExampleTests.swift */,
 			);
 			path = XCTestMeasureExampleTests;
 			sourceTree = "<group>";
@@ -103,13 +103,13 @@
 			productReference = 9BD16EB42A7935C800E887D8 /* XCTestMeasureExample */;
 			productType = "com.apple.product-type.tool";
 		};
-		9BD16EC12A7935E500E887D8 /* XCTestMeasureExampleTests */ = {
+		9BD16ECD2A79D0BE00E887D8 /* XCTestMeasureExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BD16EC62A7935E500E887D8 /* Build configuration list for PBXNativeTarget "XCTestMeasureExampleTests" */;
+			buildConfigurationList = 9BD16ED22A79D0BE00E887D8 /* Build configuration list for PBXNativeTarget "XCTestMeasureExampleTests" */;
 			buildPhases = (
-				9BD16EBE2A7935E500E887D8 /* Sources */,
-				9BD16EBF2A7935E500E887D8 /* Frameworks */,
-				9BD16EC02A7935E500E887D8 /* Resources */,
+				9BD16ECA2A79D0BE00E887D8 /* Sources */,
+				9BD16ECB2A79D0BE00E887D8 /* Frameworks */,
+				9BD16ECC2A79D0BE00E887D8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -117,7 +117,7 @@
 			);
 			name = XCTestMeasureExampleTests;
 			productName = XCTestMeasureExampleTests;
-			productReference = 9BD16EC22A7935E500E887D8 /* XCTestMeasureExampleTests.xctest */;
+			productReference = 9BD16ECE2A79D0BE00E887D8 /* XCTestMeasureExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +133,7 @@
 					9BD16EB32A7935C800E887D8 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
-					9BD16EC12A7935E500E887D8 = {
+					9BD16ECD2A79D0BE00E887D8 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -152,13 +152,13 @@
 			projectRoot = "";
 			targets = (
 				9BD16EB32A7935C800E887D8 /* XCTestMeasureExample */,
-				9BD16EC12A7935E500E887D8 /* XCTestMeasureExampleTests */,
+				9BD16ECD2A79D0BE00E887D8 /* XCTestMeasureExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9BD16EC02A7935E500E887D8 /* Resources */ = {
+		9BD16ECC2A79D0BE00E887D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,12 +176,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BD16EBE2A7935E500E887D8 /* Sources */ = {
+		9BD16ECA2A79D0BE00E887D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BD16EC92A79372800E887D8 /* main.swift in Sources */,
-				9BD16EC52A7935E500E887D8 /* XCTestMeasureExampleTests.swift in Sources */,
+				9BD16ED52A79D15C00E887D8 /* main.swift in Sources */,
+				9BD16ED12A79D0BE00E887D8 /* XCTestMeasureExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +323,7 @@
 			};
 			name = Release;
 		};
-		9BD16EC72A7935E500E887D8 /* Debug */ = {
+		9BD16ED32A79D0BE00E887D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -338,7 +338,7 @@
 			};
 			name = Debug;
 		};
-		9BD16EC82A7935E500E887D8 /* Release */ = {
+		9BD16ED42A79D0BE00E887D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -374,11 +374,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BD16EC62A7935E500E887D8 /* Build configuration list for PBXNativeTarget "XCTestMeasureExampleTests" */ = {
+		9BD16ED22A79D0BE00E887D8 /* Build configuration list for PBXNativeTarget "XCTestMeasureExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9BD16EC72A7935E500E887D8 /* Debug */,
-				9BD16EC82A7935E500E887D8 /* Release */,
+				9BD16ED32A79D0BE00E887D8 /* Debug */,
+				9BD16ED42A79D0BE00E887D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
