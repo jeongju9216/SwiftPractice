@@ -12,7 +12,6 @@
 		9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */; };
 		9BAA76112A84DA4B00ACD7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA76102A84DA4B00ACD7A0 /* Assets.xcassets */; };
 		9BAA76142A84DA4B00ACD7A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA76122A84DA4B00ACD7A0 /* LaunchScreen.storyboard */; };
-		9BAA761C2A84DA6F00ACD7A0 /* JeongImageCache in Resources */ = {isa = PBXBuildFile; fileRef = 9BAA761B2A84DA6F00ACD7A0 /* JeongImageCache */; };
 		9BAA761E2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA761D2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift */; };
 		9BAA76212A84DFC700ACD7A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9BAA76202A84DFC700ACD7A0 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 		9BAA76102A84DA4B00ACD7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BAA76132A84DA4B00ACD7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BAA76152A84DA4B00ACD7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BAA761B2A84DA6F00ACD7A0 /* JeongImageCache */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JeongImageCache; sourceTree = "<group>"; };
 		9BAA761D2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
 		9BAA76062A84DA4A00ACD7A0 /* JICExample */ = {
 			isa = PBXGroup;
 			children = (
-				9BAA761B2A84DA6F00ACD7A0 /* JeongImageCache */,
 				9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */,
 				9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */,
 				9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */,
@@ -137,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA76142A84DA4B00ACD7A0 /* LaunchScreen.storyboard in Resources */,
-				9BAA761C2A84DA6F00ACD7A0 /* JeongImageCache in Resources */,
 				9BAA76112A84DA4B00ACD7A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
