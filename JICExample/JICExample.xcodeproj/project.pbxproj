@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5C96D32A84E1C4008DCEB0 /* JeongImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96CC2A84E1C3008DCEB0 /* JeongImageDownloader.swift */; };
+		9B5C96D42A84E1C4008DCEB0 /* JeongDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96CD2A84E1C3008DCEB0 /* JeongDiskCache.swift */; };
+		9B5C96D52A84E1C4008DCEB0 /* JeongImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96CE2A84E1C4008DCEB0 /* JeongImageCache.swift */; };
+		9B5C96D62A84E1C4008DCEB0 /* JeongMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96CF2A84E1C4008DCEB0 /* JeongMemoryCache.swift */; };
+		9B5C96D72A84E1C4008DCEB0 /* JeongImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96D02A84E1C4008DCEB0 /* JeongImageProcessor.swift */; };
+		9B5C96D82A84E1C4008DCEB0 /* JICLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96D12A84E1C4008DCEB0 /* JICLogger.swift */; };
+		9B5C96D92A84E1C4008DCEB0 /* JeongCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96D22A84E1C4008DCEB0 /* JeongCacheItem.swift */; };
+		9B5C96DE2A84E1D5008DCEB0 /* JeongCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96DB2A84E1D5008DCEB0 /* JeongCacheError.swift */; };
+		9B5C96DF2A84E1D5008DCEB0 /* JeongCacheExpiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96DC2A84E1D5008DCEB0 /* JeongCacheExpiration.swift */; };
+		9B5C96E02A84E1D5008DCEB0 /* JeongDataSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96DD2A84E1D5008DCEB0 /* JeongDataSize.swift */; };
+		9B5C96E62A84E1EB008DCEB0 /* JeongCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96E32A84E1EB008DCEB0 /* JeongCacheable.swift */; };
+		9B5C96E72A84E1EB008DCEB0 /* JeongImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96E42A84E1EB008DCEB0 /* JeongImageDownloadable.swift */; };
+		9B5C96E82A84E1EB008DCEB0 /* JeongImageProcessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96E52A84E1EB008DCEB0 /* JeongImageProcessable.swift */; };
+		9B5C96ED2A84E1F3008DCEB0 /* UIImage+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */; };
+		9B5C96EE2A84E1F3008DCEB0 /* Data+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */; };
+		9B5C96EF2A84E1F3008DCEB0 /* String+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */; };
+		9B5C96F02A84E1F3008DCEB0 /* UIImageView+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
 		9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */; };
 		9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */; };
@@ -17,6 +34,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B5C96CC2A84E1C3008DCEB0 /* JeongImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongImageDownloader.swift; path = JICExample/JeongImageCache/JeongImageDownloader.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96CD2A84E1C3008DCEB0 /* JeongDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongDiskCache.swift; path = JICExample/JeongImageCache/JeongDiskCache.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96CE2A84E1C4008DCEB0 /* JeongImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongImageCache.swift; path = JICExample/JeongImageCache/JeongImageCache.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96CF2A84E1C4008DCEB0 /* JeongMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongMemoryCache.swift; path = JICExample/JeongImageCache/JeongMemoryCache.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96D02A84E1C4008DCEB0 /* JeongImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongImageProcessor.swift; path = JICExample/JeongImageCache/JeongImageProcessor.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96D12A84E1C4008DCEB0 /* JICLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JICLogger.swift; path = JICExample/JeongImageCache/JICLogger.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96D22A84E1C4008DCEB0 /* JeongCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongCacheItem.swift; path = JICExample/JeongImageCache/JeongCacheItem.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96DB2A84E1D5008DCEB0 /* JeongCacheError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongCacheError.swift; path = JICExample/JeongImageCache/Enums/JeongCacheError.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96DC2A84E1D5008DCEB0 /* JeongCacheExpiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongCacheExpiration.swift; path = JICExample/JeongImageCache/Enums/JeongCacheExpiration.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96DD2A84E1D5008DCEB0 /* JeongDataSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongDataSize.swift; path = JICExample/JeongImageCache/Enums/JeongDataSize.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96E32A84E1EB008DCEB0 /* JeongCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongCacheable.swift; path = JICExample/JeongImageCache/Protocols/JeongCacheable.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96E42A84E1EB008DCEB0 /* JeongImageDownloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongImageDownloadable.swift; path = JICExample/JeongImageCache/Protocols/JeongImageDownloadable.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96E52A84E1EB008DCEB0 /* JeongImageProcessable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JeongImageProcessable.swift; path = JICExample/JeongImageCache/Protocols/JeongImageProcessable.swift; sourceTree = SOURCE_ROOT; };
+		9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/UIImage+JIC.swift"; sourceTree = SOURCE_ROOT; };
+		9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/Data+JIC.swift"; sourceTree = SOURCE_ROOT; };
+		9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/String+JIC.swift"; sourceTree = SOURCE_ROOT; };
+		9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/UIImageView+JIC.swift"; sourceTree = SOURCE_ROOT; };
 		9BAA76042A84DA4A00ACD7A0 /* JICExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +73,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B5C96B72A84E19A008DCEB0 /* JIC */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C96E22A84E1E4008DCEB0 /* Protocols */,
+				9B5C96E12A84E1DE008DCEB0 /* Extensions */,
+				9B5C96DA2A84E1CE008DCEB0 /* Enums */,
+				9B5C96D22A84E1C4008DCEB0 /* JeongCacheItem.swift */,
+				9B5C96CD2A84E1C3008DCEB0 /* JeongDiskCache.swift */,
+				9B5C96CE2A84E1C4008DCEB0 /* JeongImageCache.swift */,
+				9B5C96CC2A84E1C3008DCEB0 /* JeongImageDownloader.swift */,
+				9B5C96D02A84E1C4008DCEB0 /* JeongImageProcessor.swift */,
+				9B5C96CF2A84E1C4008DCEB0 /* JeongMemoryCache.swift */,
+				9B5C96D12A84E1C4008DCEB0 /* JICLogger.swift */,
+			);
+			path = JIC;
+			sourceTree = "<group>";
+		};
+		9B5C96DA2A84E1CE008DCEB0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C96DB2A84E1D5008DCEB0 /* JeongCacheError.swift */,
+				9B5C96DC2A84E1D5008DCEB0 /* JeongCacheExpiration.swift */,
+				9B5C96DD2A84E1D5008DCEB0 /* JeongDataSize.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9B5C96E12A84E1DE008DCEB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */,
+				9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */,
+				9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */,
+				9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B5C96E22A84E1E4008DCEB0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C96E32A84E1EB008DCEB0 /* JeongCacheable.swift */,
+				9B5C96E42A84E1EB008DCEB0 /* JeongImageDownloadable.swift */,
+				9B5C96E52A84E1EB008DCEB0 /* JeongImageProcessable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9BAA75FB2A84DA4A00ACD7A0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +140,7 @@
 		9BAA76062A84DA4A00ACD7A0 /* JICExample */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C96B72A84E19A008DCEB0 /* JIC */,
 				9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */,
 				9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */,
 				9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */,
@@ -145,8 +228,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5C96EE2A84E1F3008DCEB0 /* Data+JIC.swift in Sources */,
+				9B5C96E62A84E1EB008DCEB0 /* JeongCacheable.swift in Sources */,
+				9B5C96F02A84E1F3008DCEB0 /* UIImageView+JIC.swift in Sources */,
+				9B5C96DF2A84E1D5008DCEB0 /* JeongCacheExpiration.swift in Sources */,
+				9B5C96ED2A84E1F3008DCEB0 /* UIImage+JIC.swift in Sources */,
+				9B5C96D32A84E1C4008DCEB0 /* JeongImageDownloader.swift in Sources */,
+				9B5C96E02A84E1D5008DCEB0 /* JeongDataSize.swift in Sources */,
+				9B5C96E82A84E1EB008DCEB0 /* JeongImageProcessable.swift in Sources */,
+				9B5C96D62A84E1C4008DCEB0 /* JeongMemoryCache.swift in Sources */,
+				9B5C96D82A84E1C4008DCEB0 /* JICLogger.swift in Sources */,
+				9B5C96D52A84E1C4008DCEB0 /* JeongImageCache.swift in Sources */,
+				9B5C96D92A84E1C4008DCEB0 /* JeongCacheItem.swift in Sources */,
+				9B5C96D72A84E1C4008DCEB0 /* JeongImageProcessor.swift in Sources */,
+				9B5C96E72A84E1EB008DCEB0 /* JeongImageDownloadable.swift in Sources */,
+				9B5C96D42A84E1C4008DCEB0 /* JeongDiskCache.swift in Sources */,
 				9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */,
+				9B5C96EF2A84E1F3008DCEB0 /* String+JIC.swift in Sources */,
 				9BAA761E2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift in Sources */,
+				9B5C96DE2A84E1D5008DCEB0 /* JeongCacheError.swift in Sources */,
 				9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */,
 				9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */,
 			);
