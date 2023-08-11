@@ -28,7 +28,7 @@ public final class JeongImageProcessor: JeongImageProcessable {
             image.draw(in: CGRect(origin: .zero, size: newSize))
         }
         let endTime = CFAbsoluteTimeGetCurrent() - startTime
-        JICLogger.log("[ImageProcessor] (\(Int(image.size.width)), \(Int(image.size.height))) -> (\(Int(newSize.width)), \(Int(newSize.height))) / Time: \(endTime)")
+//        JICLogger.log("[ImageProcessor] (\(Int(image.size.width)), \(Int(image.size.height))) -> (\(Int(newSize.width)), \(Int(newSize.height))) / Time: \(endTime)")
         
         return renderImage
     }
