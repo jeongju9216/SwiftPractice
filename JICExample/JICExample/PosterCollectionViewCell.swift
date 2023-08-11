@@ -40,9 +40,11 @@ class PosterCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Methods
     func configure(with urlString: String) {
-//        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: urlString) else { return }
         
-        posterImageView.setImageUsingJIC(url: urlString)
+//        posterImageView.setImageUsingJIC(url: urlString)
+        posterImageView.kf.setImage(with: url)
+        posterImageView.jic.setImageUsingJIC(url: urlString)
     }
     
     func cancelDownloadImage() {
