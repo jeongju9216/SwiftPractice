@@ -7,10 +7,6 @@
 
 import UIKit
 
-public typealias JFImage = UIImage
-public typealias JFImageView = UIImageView
-public typealias JFData = Data
-
 public struct JeongfisherWrapper<Base> {
     
     // MARK: - Properties
@@ -31,5 +27,5 @@ extension QueenfisherCompatible {
 }
 
 // MARK: - Conforms Queenfisher Compatible
-extension JFImage: QueenfisherCompatible {}
-extension JFImageView: QueenfisherCompatible {}
+extension UIImage: QueenfisherCompatible {}
+extension UIImageView: QueenfisherCompatible {}

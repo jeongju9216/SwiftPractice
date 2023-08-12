@@ -23,7 +23,6 @@
 		9B5C96ED2A84E1F3008DCEB0 /* UIImage+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */; };
 		9B5C96EE2A84E1F3008DCEB0 /* Data+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */; };
 		9B5C96EF2A84E1F3008DCEB0 /* String+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */; };
-		9B5C96F02A84E1F3008DCEB0 /* UIImageView+JIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */; };
 		9B5C96F52A865CA6008DCEB0 /* Jeongfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96F42A865CA6008DCEB0 /* Jeongfisher.swift */; };
 		9B5C96F72A866448008DCEB0 /* UIImageView+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C96F62A866448008DCEB0 /* UIImageView+JF.swift */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
@@ -52,7 +51,6 @@
 		9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/UIImage+JIC.swift"; sourceTree = SOURCE_ROOT; };
 		9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/Data+JIC.swift"; sourceTree = SOURCE_ROOT; };
 		9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/String+JIC.swift"; sourceTree = SOURCE_ROOT; };
-		9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+JIC.swift"; path = "JICExample/JeongImageCache/Extensions/UIImageView+JIC.swift"; sourceTree = SOURCE_ROOT; };
 		9B5C96F42A865CA6008DCEB0 /* Jeongfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeongfisher.swift; sourceTree = "<group>"; };
 		9B5C96F62A866448008DCEB0 /* UIImageView+JF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+JF.swift"; sourceTree = "<group>"; };
 		9BAA76042A84DA4A00ACD7A0 /* JICExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +109,6 @@
 				9B5C96EA2A84E1F3008DCEB0 /* Data+JIC.swift */,
 				9B5C96EB2A84E1F3008DCEB0 /* String+JIC.swift */,
 				9B5C96E92A84E1F3008DCEB0 /* UIImage+JIC.swift */,
-				9B5C96EC2A84E1F3008DCEB0 /* UIImageView+JIC.swift */,
 				9B5C96F62A866448008DCEB0 /* UIImageView+JF.swift */,
 			);
 			path = Extensions;
@@ -237,7 +234,6 @@
 				9B5C96F52A865CA6008DCEB0 /* Jeongfisher.swift in Sources */,
 				9B5C96EE2A84E1F3008DCEB0 /* Data+JIC.swift in Sources */,
 				9B5C96E62A84E1EB008DCEB0 /* JeongCacheable.swift in Sources */,
-				9B5C96F02A84E1F3008DCEB0 /* UIImageView+JIC.swift in Sources */,
 				9B5C96DF2A84E1D5008DCEB0 /* JeongCacheExpiration.swift in Sources */,
 				9B5C96ED2A84E1F3008DCEB0 /* UIImage+JIC.swift in Sources */,
 				9B5C96D32A84E1C4008DCEB0 /* JeongImageDownloader.swift in Sources */,

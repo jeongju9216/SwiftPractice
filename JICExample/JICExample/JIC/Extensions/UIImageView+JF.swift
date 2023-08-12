@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-extension JeongfisherWrapper where Base: JFImageView {
+extension JeongfisherWrapper where Base: UIImageView {
     
     ///url을 이용해 UIImage 설정
     ///
@@ -46,7 +46,6 @@ extension JeongfisherWrapper where Base: JFImageView {
             }
             
             if let imageData = imageData, let image = imageData.data.convertToImage() {
-                //                self.base.image = await JeongImageProcessor.shared.resizedImage(image, newSize: self.base.frame.size)
                 let ratio: CGFloat = await max(self.base.frame.width, self.base.frame.height) / min(self.base.frame.width, self.base.frame.height)
                 let image = JeongImageProcessor.shared.resizedImage(image, scale: ratio)
 

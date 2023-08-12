@@ -64,20 +64,12 @@ class ViewController: UIViewController {
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
             
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: itemSize, subitems: [item])
+            let group = NSCollectionLayoutGroup.vertical(layoutSize: itemSize, subitems: [item])
             
             let section = NSCollectionLayoutSection(group: group)
-            section.orthogonalScrollingBehavior = .continuous
+//            section.orthogonalScrollingBehavior = .continuous
             let sectionInset = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 10)
             section.contentInsets = sectionInset
-            
-            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                    heightDimension: .estimated(30))
-            let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: headerSize,
-                elementKind: UICollectionView.elementKindSectionHeader,
-                alignment: .top)
-            section.boundarySupplementaryItems = [sectionHeader]
             
             return section
         }
