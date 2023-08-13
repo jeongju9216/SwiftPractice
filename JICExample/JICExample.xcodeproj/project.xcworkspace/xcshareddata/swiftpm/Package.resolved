@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jeongju9216/Jeongfisher",
       "state" : {
-        "branch" : "main",
-        "revision" : "b97365fc47cb7f163facd9dbb44040abd5ec24c2"
+        "branch" : "develop",
+        "revision" : "3e8660abad575d6be47e66bb5007d85963e20c14"
       }
     },
     {

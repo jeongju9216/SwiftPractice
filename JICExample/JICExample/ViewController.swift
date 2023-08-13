@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }()
 
     //MARK: - Properties
-    private let testItem: [String] = (100...300).map { "https://picsum.photos/\($0)" }
+    private let testItem: [String] = (500...600).map { "https://picsum.photos/\($0)" }
 //    private let testItem: [String] = Array(repeating: "https://picsum.photos/100", count: 100)
 
     //MARK: - Life Cycles

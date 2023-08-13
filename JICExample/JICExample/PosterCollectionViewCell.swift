@@ -44,7 +44,7 @@ class PosterCollectionViewCell: UICollectionViewCell {
         guard let url = URL(string: urlString) else { return }
         
 //        posterImageView.kf.setImage(with: url)
-        posterImageView.jf.setImage(with: url, placeHolder: UIImage(systemName: "trophy.fill"))
+        posterImageView.jf.setImage(with: url)
     }
     
     func cancelDownloadImage(urlString: String) {
