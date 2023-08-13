@@ -32,7 +32,8 @@ class ViewController: UIViewController {
     }()
 
     //MARK: - Properties
-    private let testItem: [String] = Array(repeating: "https://picsum.photos/500", count: 100)
+    private let testItem: [String] = (100...300).map { "https://picsum.photos/\($0)" }
+//    private let testItem: [String] = Array(repeating: "https://picsum.photos/100", count: 100)
 
     //MARK: - Life Cycles
     override func viewDidLoad() {
@@ -59,17 +60,15 @@ class ViewController: UIViewController {
     
     private func createCollectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection in
-            let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(150),
-                                                  heightDimension: .absolute(220))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                  heightDimension: .absolute(100))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
+            item.contentInsets = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
             
             let group = NSCollectionLayoutGroup.vertical(layoutSize: itemSize, subitems: [item])
             
             let section = NSCollectionLayoutSection(group: group)
 //            section.orthogonalScrollingBehavior = .continuous
-            let sectionInset = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 20, trailing: 10)
-            section.contentInsets = sectionInset
             
             return section
         }
@@ -82,7 +81,7 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? PosterCollectionViewCell else { return }
         
-        cell.cancelDownloadImage()
+        cell.cancelDownloadImage(urlString: testItem[indexPath.row])
     }
 }
 

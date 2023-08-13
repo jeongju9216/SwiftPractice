@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Jeongfisher
 
 class PosterCollectionViewCell: UICollectionViewCell {
     
@@ -42,13 +43,12 @@ class PosterCollectionViewCell: UICollectionViewCell {
     func configure(with urlString: String) {
         guard let url = URL(string: urlString) else { return }
         
-//        posterImageView.setImageUsingJIC(url: urlString)
 //        posterImageView.kf.setImage(with: url)
-        posterImageView.jf.setImage(url: urlString)
-        
+        posterImageView.jf.setImage(with: url, placeHolder: UIImage(systemName: "trophy.fill"))
     }
     
-    func cancelDownloadImage() {
-        posterImageView.kf.cancelDownloadTask()
+    func cancelDownloadImage(urlString: String) {
+//        posterImageView.kf.cancelDownloadTask()
+        posterImageView.jf.cancelDownloadImage()
     }
 }
