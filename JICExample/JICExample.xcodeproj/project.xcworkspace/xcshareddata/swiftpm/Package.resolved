@@ -1,15 +1,6 @@
 {
   "pins" : [
     {
-      "identity" : "jeongfisher",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jeongju9216/Jeongfisher",
-      "state" : {
-        "revision" : "7e1852c3d782433760dfcae3a2619bf8712d317a",
-        "version" : "2.2.0"
-      }
-    },
-    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",
