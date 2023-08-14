@@ -41,6 +41,7 @@ class PosterCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Methods
     func configure(with urlString: String) {
+        posterImageView.image = nil
         guard let url = URL(string: urlString) else { return }
         
 //        posterImageView.kf.setImage(with: url)

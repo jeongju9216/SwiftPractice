@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B5C977A2A88CA36008DCEB0 /* Jeongfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B5C97792A88CA36008DCEB0 /* Jeongfisher */; };
+		9B4634F32A8A3477002FEED1 /* Jeongfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B4634F22A8A3477002FEED1 /* Jeongfisher */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
 		9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */; };
 		9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */; };
@@ -34,7 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA76212A84DFC700ACD7A0 /* Kingfisher in Frameworks */,
-				9B5C977A2A88CA36008DCEB0 /* Jeongfisher in Frameworks */,
+				9B4634F32A8A3477002FEED1 /* Jeongfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 			name = JICExample;
 			packageProductDependencies = (
 				9BAA76202A84DFC700ACD7A0 /* Kingfisher */,
-				9B5C97792A88CA36008DCEB0 /* Jeongfisher */,
+				9B4634F22A8A3477002FEED1 /* Jeongfisher */,
 			);
 			productName = JICExample;
 			productReference = 9BAA76042A84DA4A00ACD7A0 /* JICExample.app */;
@@ -121,7 +121,7 @@
 			mainGroup = 9BAA75FB2A84DA4A00ACD7A0;
 			packageReferences = (
 				9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				9B5C97782A88CA36008DCEB0 /* XCRemoteSwiftPackageReference "Jeongfisher" */,
+				9B4634F12A8A3477002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */,
 			);
 			productRefGroup = 9BAA76052A84DA4A00ACD7A0 /* Products */;
 			projectDirPath = "";
@@ -364,12 +364,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9B5C97782A88CA36008DCEB0 /* XCRemoteSwiftPackageReference "Jeongfisher" */ = {
+		9B4634F12A8A3477002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jeongju9216/Jeongfisher";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
 			};
 		};
 		9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
@@ -383,9 +383,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B5C97792A88CA36008DCEB0 /* Jeongfisher */ = {
+		9B4634F22A8A3477002FEED1 /* Jeongfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B5C97782A88CA36008DCEB0 /* XCRemoteSwiftPackageReference "Jeongfisher" */;
+			package = 9B4634F12A8A3477002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */;
 			productName = Jeongfisher;
 		};
 		9BAA76202A84DFC700ACD7A0 /* Kingfisher */ = {
