@@ -7,24 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B4635112A8A6BD1002FEED1 /* JFCacheExpiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634F72A8A6BD1002FEED1 /* JFCacheExpiration.swift */; };
-		9B4635122A8A6BD1002FEED1 /* JFCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634F82A8A6BD1002FEED1 /* JFCacheError.swift */; };
-		9B4635132A8A6BD1002FEED1 /* JFDataSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634F92A8A6BD1002FEED1 /* JFDataSize.swift */; };
-		9B4635142A8A6BD1002FEED1 /* JFMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634FA2A8A6BD1002FEED1 /* JFMemoryCache.swift */; };
-		9B4635152A8A6BD1002FEED1 /* JFDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634FB2A8A6BD1002FEED1 /* JFDiskCache.swift */; };
-		9B4635162A8A6BD1002FEED1 /* JFCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634FD2A8A6BD1002FEED1 /* JFCacheable.swift */; };
-		9B4635172A8A6BD1002FEED1 /* JFImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634FE2A8A6BD1002FEED1 /* JFImageCache.swift */; };
-		9B4635182A8A6BD1002FEED1 /* JFCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4634FF2A8A6BD1002FEED1 /* JFCacheItem.swift */; };
-		9B4635192A8A6BD1002FEED1 /* Jeongfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635012A8A6BD1002FEED1 /* Jeongfisher.swift */; };
-		9B46351A2A8A6BD1002FEED1 /* JFOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635032A8A6BD1002FEED1 /* JFOption.swift */; };
-		9B46351B2A8A6BD1002FEED1 /* JFNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635062A8A6BD1002FEED1 /* JFNetworkError.swift */; };
-		9B46351C2A8A6BD1002FEED1 /* JFImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635082A8A6BD1002FEED1 /* JFImageDownloadable.swift */; };
-		9B46351D2A8A6BD1002FEED1 /* JFImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635092A8A6BD1002FEED1 /* JFImageDownloader.swift */; };
-		9B46351E2A8A6BD1002FEED1 /* JFLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46350B2A8A6BD1002FEED1 /* JFLogger.swift */; };
-		9B46351F2A8A6BD1002FEED1 /* UIImageView+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46350D2A8A6BD1002FEED1 /* UIImageView+JF.swift */; };
-		9B4635202A8A6BD1002FEED1 /* UIImage+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46350E2A8A6BD1002FEED1 /* UIImage+JF.swift */; };
-		9B4635212A8A6BD1002FEED1 /* String+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B46350F2A8A6BD1002FEED1 /* String+JF.swift */; };
-		9B4635222A8A6BD1002FEED1 /* Data+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4635102A8A6BD1002FEED1 /* Data+JF.swift */; };
+		9B4635252A8A771C002FEED1 /* Jeongfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B4635242A8A771C002FEED1 /* Jeongfisher */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
 		9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */; };
 		9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */; };
@@ -35,24 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B4634F72A8A6BD1002FEED1 /* JFCacheExpiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheExpiration.swift; sourceTree = "<group>"; };
-		9B4634F82A8A6BD1002FEED1 /* JFCacheError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheError.swift; sourceTree = "<group>"; };
-		9B4634F92A8A6BD1002FEED1 /* JFDataSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFDataSize.swift; sourceTree = "<group>"; };
-		9B4634FA2A8A6BD1002FEED1 /* JFMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFMemoryCache.swift; sourceTree = "<group>"; };
-		9B4634FB2A8A6BD1002FEED1 /* JFDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFDiskCache.swift; sourceTree = "<group>"; };
-		9B4634FD2A8A6BD1002FEED1 /* JFCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheable.swift; sourceTree = "<group>"; };
-		9B4634FE2A8A6BD1002FEED1 /* JFImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageCache.swift; sourceTree = "<group>"; };
-		9B4634FF2A8A6BD1002FEED1 /* JFCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheItem.swift; sourceTree = "<group>"; };
-		9B4635012A8A6BD1002FEED1 /* Jeongfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jeongfisher.swift; sourceTree = "<group>"; };
-		9B4635032A8A6BD1002FEED1 /* JFOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFOption.swift; sourceTree = "<group>"; };
-		9B4635062A8A6BD1002FEED1 /* JFNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFNetworkError.swift; sourceTree = "<group>"; };
-		9B4635082A8A6BD1002FEED1 /* JFImageDownloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageDownloadable.swift; sourceTree = "<group>"; };
-		9B4635092A8A6BD1002FEED1 /* JFImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageDownloader.swift; sourceTree = "<group>"; };
-		9B46350B2A8A6BD1002FEED1 /* JFLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFLogger.swift; sourceTree = "<group>"; };
-		9B46350D2A8A6BD1002FEED1 /* UIImageView+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+JF.swift"; sourceTree = "<group>"; };
-		9B46350E2A8A6BD1002FEED1 /* UIImage+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JF.swift"; sourceTree = "<group>"; };
-		9B46350F2A8A6BD1002FEED1 /* String+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JF.swift"; sourceTree = "<group>"; };
-		9B4635102A8A6BD1002FEED1 /* Data+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JF.swift"; sourceTree = "<group>"; };
 		9BAA76042A84DA4A00ACD7A0 /* JICExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,117 +34,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA76212A84DFC700ACD7A0 /* Kingfisher in Frameworks */,
+				9B4635252A8A771C002FEED1 /* Jeongfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B4634F42A8A6BD1002FEED1 /* Jeongfisher */ = {
-			isa = PBXGroup;
-			children = (
-				9B4634F52A8A6BD1002FEED1 /* Cache */,
-				9B4635002A8A6BD1002FEED1 /* General */,
-				9B4635042A8A6BD1002FEED1 /* Downloader */,
-				9B46350A2A8A6BD1002FEED1 /* Utils */,
-				9B46350C2A8A6BD1002FEED1 /* Extensions */,
-			);
-			path = Jeongfisher;
-			sourceTree = "<group>";
-		};
-		9B4634F52A8A6BD1002FEED1 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				9B4634F62A8A6BD1002FEED1 /* Enum */,
-				9B4634FA2A8A6BD1002FEED1 /* JFMemoryCache.swift */,
-				9B4634FB2A8A6BD1002FEED1 /* JFDiskCache.swift */,
-				9B4634FC2A8A6BD1002FEED1 /* Protocol */,
-				9B4634FE2A8A6BD1002FEED1 /* JFImageCache.swift */,
-				9B4634FF2A8A6BD1002FEED1 /* JFCacheItem.swift */,
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
-		9B4634F62A8A6BD1002FEED1 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				9B4634F72A8A6BD1002FEED1 /* JFCacheExpiration.swift */,
-				9B4634F82A8A6BD1002FEED1 /* JFCacheError.swift */,
-				9B4634F92A8A6BD1002FEED1 /* JFDataSize.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		9B4634FC2A8A6BD1002FEED1 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				9B4634FD2A8A6BD1002FEED1 /* JFCacheable.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		9B4635002A8A6BD1002FEED1 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				9B4635012A8A6BD1002FEED1 /* Jeongfisher.swift */,
-				9B4635022A8A6BD1002FEED1 /* Enum */,
-			);
-			path = General;
-			sourceTree = "<group>";
-		};
-		9B4635022A8A6BD1002FEED1 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				9B4635032A8A6BD1002FEED1 /* JFOption.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		9B4635042A8A6BD1002FEED1 /* Downloader */ = {
-			isa = PBXGroup;
-			children = (
-				9B4635052A8A6BD1002FEED1 /* Enum */,
-				9B4635072A8A6BD1002FEED1 /* Protocol */,
-				9B4635092A8A6BD1002FEED1 /* JFImageDownloader.swift */,
-			);
-			path = Downloader;
-			sourceTree = "<group>";
-		};
-		9B4635052A8A6BD1002FEED1 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				9B4635062A8A6BD1002FEED1 /* JFNetworkError.swift */,
-			);
-			path = Enum;
-			sourceTree = "<group>";
-		};
-		9B4635072A8A6BD1002FEED1 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				9B4635082A8A6BD1002FEED1 /* JFImageDownloadable.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		9B46350A2A8A6BD1002FEED1 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				9B46350B2A8A6BD1002FEED1 /* JFLogger.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		9B46350C2A8A6BD1002FEED1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9B46350D2A8A6BD1002FEED1 /* UIImageView+JF.swift */,
-				9B46350E2A8A6BD1002FEED1 /* UIImage+JF.swift */,
-				9B46350F2A8A6BD1002FEED1 /* String+JF.swift */,
-				9B4635102A8A6BD1002FEED1 /* Data+JF.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		9BAA75FB2A84DA4A00ACD7A0 = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +60,6 @@
 		9BAA76062A84DA4A00ACD7A0 /* JICExample */ = {
 			isa = PBXGroup;
 			children = (
-				9B4634F42A8A6BD1002FEED1 /* Jeongfisher */,
 				9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */,
 				9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */,
 				9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */,
@@ -229,6 +89,7 @@
 			name = JICExample;
 			packageProductDependencies = (
 				9BAA76202A84DFC700ACD7A0 /* Kingfisher */,
+				9B4635242A8A771C002FEED1 /* Jeongfisher */,
 			);
 			productName = JICExample;
 			productReference = 9BAA76042A84DA4A00ACD7A0 /* JICExample.app */;
@@ -260,6 +121,7 @@
 			mainGroup = 9BAA75FB2A84DA4A00ACD7A0;
 			packageReferences = (
 				9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */,
 			);
 			productRefGroup = 9BAA76052A84DA4A00ACD7A0 /* Products */;
 			projectDirPath = "";
@@ -288,27 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */,
-				9B46351F2A8A6BD1002FEED1 /* UIImageView+JF.swift in Sources */,
-				9B46351E2A8A6BD1002FEED1 /* JFLogger.swift in Sources */,
 				9BAA761E2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift in Sources */,
-				9B4635162A8A6BD1002FEED1 /* JFCacheable.swift in Sources */,
-				9B46351C2A8A6BD1002FEED1 /* JFImageDownloadable.swift in Sources */,
-				9B4635192A8A6BD1002FEED1 /* Jeongfisher.swift in Sources */,
 				9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */,
-				9B4635142A8A6BD1002FEED1 /* JFMemoryCache.swift in Sources */,
-				9B4635122A8A6BD1002FEED1 /* JFCacheError.swift in Sources */,
-				9B4635212A8A6BD1002FEED1 /* String+JF.swift in Sources */,
-				9B4635132A8A6BD1002FEED1 /* JFDataSize.swift in Sources */,
 				9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */,
-				9B4635222A8A6BD1002FEED1 /* Data+JF.swift in Sources */,
-				9B4635152A8A6BD1002FEED1 /* JFDiskCache.swift in Sources */,
-				9B46351D2A8A6BD1002FEED1 /* JFImageDownloader.swift in Sources */,
-				9B46351A2A8A6BD1002FEED1 /* JFOption.swift in Sources */,
-				9B46351B2A8A6BD1002FEED1 /* JFNetworkError.swift in Sources */,
-				9B4635172A8A6BD1002FEED1 /* JFImageCache.swift in Sources */,
-				9B4635112A8A6BD1002FEED1 /* JFCacheExpiration.swift in Sources */,
-				9B4635182A8A6BD1002FEED1 /* JFCacheItem.swift in Sources */,
-				9B4635202A8A6BD1002FEED1 /* UIImage+JF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +364,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jeongju9216/Jeongfisher";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.0;
+			};
+		};
 		9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -531,6 +383,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9B4635242A8A771C002FEED1 /* Jeongfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */;
+			productName = Jeongfisher;
+		};
 		9BAA76202A84DFC700ACD7A0 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
