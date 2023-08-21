@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0686932A939381003C5702 /* JICExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0686922A939381003C5702 /* JICExampleTests.swift */; };
 		9B4635252A8A771C002FEED1 /* Jeongfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B4635242A8A771C002FEED1 /* Jeongfisher */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
 		9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */; };
@@ -17,7 +18,19 @@
 		9BAA76212A84DFC700ACD7A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9BAA76202A84DFC700ACD7A0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9B0686942A939381003C5702 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BAA75FC2A84DA4A00ACD7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BAA76032A84DA4A00ACD7A0;
+			remoteInfo = JICExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9B0686902A939381003C5702 /* JICExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JICExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0686922A939381003C5702 /* JICExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JICExampleTests.swift; sourceTree = "<group>"; };
 		9BAA76042A84DA4A00ACD7A0 /* JICExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B06868D2A939381003C5702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BAA76012A84DA4A00ACD7A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +61,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0686912A939381003C5702 /* JICExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B0686922A939381003C5702 /* JICExampleTests.swift */,
+			);
+			path = JICExampleTests;
+			sourceTree = "<group>";
+		};
 		9BAA75FB2A84DA4A00ACD7A0 = {
 			isa = PBXGroup;
 			children = (
 				9BAA76062A84DA4A00ACD7A0 /* JICExample */,
+				9B0686912A939381003C5702 /* JICExampleTests */,
 				9BAA76052A84DA4A00ACD7A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9BAA76042A84DA4A00ACD7A0 /* JICExample.app */,
+				9B0686902A939381003C5702 /* JICExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +104,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9B06868F2A939381003C5702 /* JICExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B0686962A939381003C5702 /* Build configuration list for PBXNativeTarget "JICExampleTests" */;
+			buildPhases = (
+				9B06868C2A939381003C5702 /* Sources */,
+				9B06868D2A939381003C5702 /* Frameworks */,
+				9B06868E2A939381003C5702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B0686952A939381003C5702 /* PBXTargetDependency */,
+			);
+			name = JICExampleTests;
+			productName = JICExampleTests;
+			productReference = 9B0686902A939381003C5702 /* JICExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9BAA76032A84DA4A00ACD7A0 /* JICExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BAA76182A84DA4B00ACD7A0 /* Build configuration list for PBXNativeTarget "JICExample" */;
@@ -105,6 +153,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					9B06868F2A939381003C5702 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 9BAA76032A84DA4A00ACD7A0;
+					};
 					9BAA76032A84DA4A00ACD7A0 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -128,11 +180,19 @@
 			projectRoot = "";
 			targets = (
 				9BAA76032A84DA4A00ACD7A0 /* JICExample */,
+				9B06868F2A939381003C5702 /* JICExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B06868E2A939381003C5702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BAA76022A84DA4A00ACD7A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +205,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B06868C2A939381003C5702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B0686932A939381003C5702 /* JICExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9BAA76002A84DA4A00ACD7A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +226,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9B0686952A939381003C5702 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BAA76032A84DA4A00ACD7A0 /* JICExample */;
+			targetProxy = 9B0686942A939381003C5702 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9BAA76122A84DA4B00ACD7A0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -170,6 +246,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9B0686972A939381003C5702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WPX8MV29XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeongju9216.JICExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JICExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JICExample";
+			};
+			name = Debug;
+		};
+		9B0686982A939381003C5702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WPX8MV29XR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeongju9216.JICExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JICExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JICExample";
+			};
+			name = Release;
+		};
 		9BAA76162A84DA4B00ACD7A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +455,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B0686962A939381003C5702 /* Build configuration list for PBXNativeTarget "JICExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B0686972A939381003C5702 /* Debug */,
+				9B0686982A939381003C5702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9BAA75FF2A84DA4A00ACD7A0 /* Build configuration list for PBXProject "JICExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -369,7 +490,7 @@
 			repositoryURL = "https://github.com/jeongju9216/Jeongfisher";
 			requirement = {
 				kind = exactVersion;
-				version = 2.3.0;
+				version = 2.4.1;
 			};
 		};
 		9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {

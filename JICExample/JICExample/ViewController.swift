@@ -31,9 +31,9 @@ class ViewController: UIViewController {
     }()
 
     //MARK: - Properties
-    private let testItem: [String] = Array(repeating: "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/a2/dd/ea/a2ddea4f-15a1-6e56-50a4-cd71697e8c56/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/60x60bb.jpg", count: 100)
+//    private let testItem: [String] = Array(repeating: "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/a2/dd/ea/a2ddea4f-15a1-6e56-50a4-cd71697e8c56/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/60x60bb.jpg", count: 100)
 //    private let testItem: [String] = (1500...1600).map { "https://picsum.photos/\($0)" }
-//    private let testItem: [String] = Array(repeating: "https://picsum.photos/51", count: 100)
+    private let testItem: [String] = Array(repeating: "https://picsum.photos/1000", count: 100)
 
     //MARK: - Life Cycles
     override func viewDidLoad() {
@@ -60,12 +60,14 @@ class ViewController: UIViewController {
     
     private func createCollectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection in
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                  heightDimension: .absolute(100))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
+                                                  heightDimension: .fractionalHeight(1.0))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.contentInsets = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
             
-            let group = NSCollectionLayoutGroup.vertical(layoutSize: itemSize, subitems: [item])
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                   heightDimension: .fractionalWidth(0.2))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
             
             let section = NSCollectionLayoutSection(group: group)
 //            section.orthogonalScrollingBehavior = .continuous
