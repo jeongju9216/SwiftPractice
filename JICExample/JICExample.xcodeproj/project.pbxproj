@@ -489,8 +489,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jeongju9216/Jeongfisher";
 			requirement = {
-				kind = exactVersion;
-				version = 2.4.1;
+				branch = develop;
+				kind = branch;
 			};
 		};
 		9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {

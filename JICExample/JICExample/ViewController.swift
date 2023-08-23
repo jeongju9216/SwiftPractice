@@ -60,14 +60,14 @@ class ViewController: UIViewController {
     
     private func createCollectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection in
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.2),
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3),
                                                   heightDimension: .fractionalHeight(1.0))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.contentInsets = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
             
             let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                   heightDimension: .fractionalWidth(0.2))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
+                                                   heightDimension: .fractionalWidth(0.3))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
             
             let section = NSCollectionLayoutSection(group: group)
 //            section.orthogonalScrollingBehavior = .continuous
