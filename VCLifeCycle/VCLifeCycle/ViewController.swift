@@ -11,52 +11,68 @@ class ViewController: UIViewController {
 
     @IBOutlet var nextButton: UIButton!
     
+    // 정확한 프레임 크기와 위치를 가진 뷰 생성
+    var accurateView: UIView?
+    
     override func loadView() {
         super.loadView()
-        print("[First] - \(#function)")
+        print("A: \(#function)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("[First] - \(#function)")
-        
-        print("nextButton frame: \(nextButton.frame.size)")
-        print("nextButton frame: \(nextButton.frame)")
-        print("nextButton bounds: \(nextButton.bounds)")
+        print("A: \(#function)")
+        addView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("[First] - \(#function)")
+        print("A: \(#function)")
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        print("A: \(#function)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("[First] - \(#function)")
+        print("A: \(#function)")
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("[First] - \(#function)")
+        print("A: \(#function)")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("[First] - \(#function)")
+        print("A: \(#function)")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        print("[First] - \(#function)")
+        print("A: \(#function)")
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print("[First] - \(#function)")
-        
-        print("nextButton frame: \(nextButton.frame.size)")
-        print("nextButton frame: \(nextButton.frame)")
-        print("nextButton bounds: \(nextButton.bounds)")
+        print("A: \(#function)")
+    }
+    
+    func addView() {
+        accurateView = UIView()
+        accurateView?.translatesAutoresizingMaskIntoConstraints = false
+        if let accurateView = accurateView {
+            accurateView.backgroundColor = UIColor.blue
+            view.addSubview(accurateView)
+            NSLayoutConstraint.activate([
+                accurateView.widthAnchor.constraint(equalToConstant: view.frame.width * 0.8),
+                accurateView.heightAnchor.constraint(equalToConstant: view.frame.height * 0.1),
+                accurateView.topAnchor.constraint(equalTo: nextButton.bottomAnchor)
+            ])
+        }
     }
 }
 

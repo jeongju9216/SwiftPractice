@@ -24,6 +24,11 @@ class NextViewController: UIViewController {
         print("[Second] - \(#function)")
     }
     
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        print("[Second] - \(#function)")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("[Second] - \(#function)")
