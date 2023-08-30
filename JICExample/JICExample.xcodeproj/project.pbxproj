@@ -8,7 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9B0686932A939381003C5702 /* JICExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0686922A939381003C5702 /* JICExampleTests.swift */; };
-		9B4635252A8A771C002FEED1 /* Jeongfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B4635242A8A771C002FEED1 /* Jeongfisher */; };
+		9B4209B52A9F40E500815F49 /* JFCacheExpiration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42099B2A9F40E500815F49 /* JFCacheExpiration.swift */; };
+		9B4209B62A9F40E500815F49 /* JFCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42099C2A9F40E500815F49 /* JFCacheError.swift */; };
+		9B4209B72A9F40E500815F49 /* JFDataSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42099D2A9F40E500815F49 /* JFDataSize.swift */; };
+		9B4209B82A9F40E500815F49 /* JFMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42099E2A9F40E500815F49 /* JFMemoryCache.swift */; };
+		9B4209B92A9F40E500815F49 /* JFDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42099F2A9F40E500815F49 /* JFDiskCache.swift */; };
+		9B4209BA2A9F40E500815F49 /* JFCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209A12A9F40E500815F49 /* JFCacheable.swift */; };
+		9B4209BB2A9F40E500815F49 /* JFImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209A22A9F40E500815F49 /* JFImageCache.swift */; };
+		9B4209BC2A9F40E500815F49 /* JFCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209A32A9F40E500815F49 /* JFCacheItem.swift */; };
+		9B4209BD2A9F40E500815F49 /* Jeongfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209A52A9F40E500815F49 /* Jeongfisher.swift */; };
+		9B4209BE2A9F40E500815F49 /* JFOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209A72A9F40E500815F49 /* JFOption.swift */; };
+		9B4209BF2A9F40E500815F49 /* JFNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209AA2A9F40E500815F49 /* JFNetworkError.swift */; };
+		9B4209C02A9F40E500815F49 /* JFImageDownloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209AC2A9F40E500815F49 /* JFImageDownloadable.swift */; };
+		9B4209C12A9F40E500815F49 /* JFImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209AD2A9F40E500815F49 /* JFImageDownloader.swift */; };
+		9B4209C22A9F40E500815F49 /* JFLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209AF2A9F40E500815F49 /* JFLogger.swift */; };
+		9B4209C32A9F40E500815F49 /* UIImageView+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209B12A9F40E500815F49 /* UIImageView+JF.swift */; };
+		9B4209C42A9F40E500815F49 /* UIImage+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209B22A9F40E500815F49 /* UIImage+JF.swift */; };
+		9B4209C52A9F40E500815F49 /* String+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209B32A9F40E500815F49 /* String+JF.swift */; };
+		9B4209C62A9F40E500815F49 /* Data+JF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4209B42A9F40E500815F49 /* Data+JF.swift */; };
 		9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */; };
 		9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */; };
 		9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */; };
@@ -31,6 +48,24 @@
 /* Begin PBXFileReference section */
 		9B0686902A939381003C5702 /* JICExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JICExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B0686922A939381003C5702 /* JICExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JICExampleTests.swift; sourceTree = "<group>"; };
+		9B42099B2A9F40E500815F49 /* JFCacheExpiration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheExpiration.swift; sourceTree = "<group>"; };
+		9B42099C2A9F40E500815F49 /* JFCacheError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheError.swift; sourceTree = "<group>"; };
+		9B42099D2A9F40E500815F49 /* JFDataSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFDataSize.swift; sourceTree = "<group>"; };
+		9B42099E2A9F40E500815F49 /* JFMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFMemoryCache.swift; sourceTree = "<group>"; };
+		9B42099F2A9F40E500815F49 /* JFDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFDiskCache.swift; sourceTree = "<group>"; };
+		9B4209A12A9F40E500815F49 /* JFCacheable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheable.swift; sourceTree = "<group>"; };
+		9B4209A22A9F40E500815F49 /* JFImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageCache.swift; sourceTree = "<group>"; };
+		9B4209A32A9F40E500815F49 /* JFCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFCacheItem.swift; sourceTree = "<group>"; };
+		9B4209A52A9F40E500815F49 /* Jeongfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jeongfisher.swift; sourceTree = "<group>"; };
+		9B4209A72A9F40E500815F49 /* JFOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFOption.swift; sourceTree = "<group>"; };
+		9B4209AA2A9F40E500815F49 /* JFNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFNetworkError.swift; sourceTree = "<group>"; };
+		9B4209AC2A9F40E500815F49 /* JFImageDownloadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageDownloadable.swift; sourceTree = "<group>"; };
+		9B4209AD2A9F40E500815F49 /* JFImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFImageDownloader.swift; sourceTree = "<group>"; };
+		9B4209AF2A9F40E500815F49 /* JFLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JFLogger.swift; sourceTree = "<group>"; };
+		9B4209B12A9F40E500815F49 /* UIImageView+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+JF.swift"; sourceTree = "<group>"; };
+		9B4209B22A9F40E500815F49 /* UIImage+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+JF.swift"; sourceTree = "<group>"; };
+		9B4209B32A9F40E500815F49 /* String+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JF.swift"; sourceTree = "<group>"; };
+		9B4209B42A9F40E500815F49 /* Data+JF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+JF.swift"; sourceTree = "<group>"; };
 		9BAA76042A84DA4A00ACD7A0 /* JICExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JICExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA76212A84DFC700ACD7A0 /* Kingfisher in Frameworks */,
-				9B4635252A8A771C002FEED1 /* Jeongfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +101,111 @@
 				9B0686922A939381003C5702 /* JICExampleTests.swift */,
 			);
 			path = JICExampleTests;
+			sourceTree = "<group>";
+		};
+		9B4209982A9F40E500815F49 /* Jeongfisher */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209992A9F40E500815F49 /* Cache */,
+				9B4209A42A9F40E500815F49 /* General */,
+				9B4209A82A9F40E500815F49 /* Downloader */,
+				9B4209AE2A9F40E500815F49 /* Utils */,
+				9B4209B02A9F40E500815F49 /* Extensions */,
+			);
+			path = Jeongfisher;
+			sourceTree = "<group>";
+		};
+		9B4209992A9F40E500815F49 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				9B42099A2A9F40E500815F49 /* Enum */,
+				9B42099E2A9F40E500815F49 /* JFMemoryCache.swift */,
+				9B42099F2A9F40E500815F49 /* JFDiskCache.swift */,
+				9B4209A02A9F40E500815F49 /* Protocol */,
+				9B4209A22A9F40E500815F49 /* JFImageCache.swift */,
+				9B4209A32A9F40E500815F49 /* JFCacheItem.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		9B42099A2A9F40E500815F49 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9B42099B2A9F40E500815F49 /* JFCacheExpiration.swift */,
+				9B42099C2A9F40E500815F49 /* JFCacheError.swift */,
+				9B42099D2A9F40E500815F49 /* JFDataSize.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9B4209A02A9F40E500815F49 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209A12A9F40E500815F49 /* JFCacheable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9B4209A42A9F40E500815F49 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209A52A9F40E500815F49 /* Jeongfisher.swift */,
+				9B4209A62A9F40E500815F49 /* Enum */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		9B4209A62A9F40E500815F49 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209A72A9F40E500815F49 /* JFOption.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9B4209A82A9F40E500815F49 /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209A92A9F40E500815F49 /* Enum */,
+				9B4209AB2A9F40E500815F49 /* Protocol */,
+				9B4209AD2A9F40E500815F49 /* JFImageDownloader.swift */,
+			);
+			path = Downloader;
+			sourceTree = "<group>";
+		};
+		9B4209A92A9F40E500815F49 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209AA2A9F40E500815F49 /* JFNetworkError.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9B4209AB2A9F40E500815F49 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209AC2A9F40E500815F49 /* JFImageDownloadable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9B4209AE2A9F40E500815F49 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209AF2A9F40E500815F49 /* JFLogger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B4209B02A9F40E500815F49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B4209B12A9F40E500815F49 /* UIImageView+JF.swift */,
+				9B4209B22A9F40E500815F49 /* UIImage+JF.swift */,
+				9B4209B32A9F40E500815F49 /* String+JF.swift */,
+				9B4209B42A9F40E500815F49 /* Data+JF.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9BAA75FB2A84DA4A00ACD7A0 = {
@@ -90,6 +229,7 @@
 		9BAA76062A84DA4A00ACD7A0 /* JICExample */ = {
 			isa = PBXGroup;
 			children = (
+				9B4209982A9F40E500815F49 /* Jeongfisher */,
 				9BAA76072A84DA4A00ACD7A0 /* AppDelegate.swift */,
 				9BAA76092A84DA4A00ACD7A0 /* SceneDelegate.swift */,
 				9BAA760B2A84DA4A00ACD7A0 /* ViewController.swift */,
@@ -137,7 +277,6 @@
 			name = JICExample;
 			packageProductDependencies = (
 				9BAA76202A84DFC700ACD7A0 /* Kingfisher */,
-				9B4635242A8A771C002FEED1 /* Jeongfisher */,
 			);
 			productName = JICExample;
 			productReference = 9BAA76042A84DA4A00ACD7A0 /* JICExample.app */;
@@ -173,7 +312,6 @@
 			mainGroup = 9BAA75FB2A84DA4A00ACD7A0;
 			packageReferences = (
 				9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */,
 			);
 			productRefGroup = 9BAA76052A84DA4A00ACD7A0 /* Products */;
 			projectDirPath = "";
@@ -218,9 +356,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BAA760C2A84DA4A00ACD7A0 /* ViewController.swift in Sources */,
+				9B4209C32A9F40E500815F49 /* UIImageView+JF.swift in Sources */,
+				9B4209C22A9F40E500815F49 /* JFLogger.swift in Sources */,
 				9BAA761E2A84DC8400ACD7A0 /* PosterCollectionViewCell.swift in Sources */,
+				9B4209BA2A9F40E500815F49 /* JFCacheable.swift in Sources */,
+				9B4209C02A9F40E500815F49 /* JFImageDownloadable.swift in Sources */,
+				9B4209BD2A9F40E500815F49 /* Jeongfisher.swift in Sources */,
 				9BAA76082A84DA4A00ACD7A0 /* AppDelegate.swift in Sources */,
+				9B4209B82A9F40E500815F49 /* JFMemoryCache.swift in Sources */,
+				9B4209B62A9F40E500815F49 /* JFCacheError.swift in Sources */,
+				9B4209C52A9F40E500815F49 /* String+JF.swift in Sources */,
+				9B4209B72A9F40E500815F49 /* JFDataSize.swift in Sources */,
 				9BAA760A2A84DA4A00ACD7A0 /* SceneDelegate.swift in Sources */,
+				9B4209C62A9F40E500815F49 /* Data+JF.swift in Sources */,
+				9B4209B92A9F40E500815F49 /* JFDiskCache.swift in Sources */,
+				9B4209C12A9F40E500815F49 /* JFImageDownloader.swift in Sources */,
+				9B4209BE2A9F40E500815F49 /* JFOption.swift in Sources */,
+				9B4209BF2A9F40E500815F49 /* JFNetworkError.swift in Sources */,
+				9B4209BB2A9F40E500815F49 /* JFImageCache.swift in Sources */,
+				9B4209B52A9F40E500815F49 /* JFCacheExpiration.swift in Sources */,
+				9B4209BC2A9F40E500815F49 /* JFCacheItem.swift in Sources */,
+				9B4209C42A9F40E500815F49 /* UIImage+JF.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,14 +641,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jeongju9216/Jeongfisher";
-			requirement = {
-				branch = develop;
-				kind = branch;
-			};
-		};
 		9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -504,11 +652,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B4635242A8A771C002FEED1 /* Jeongfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9B4635232A8A771C002FEED1 /* XCRemoteSwiftPackageReference "Jeongfisher" */;
-			productName = Jeongfisher;
-		};
 		9BAA76202A84DFC700ACD7A0 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9BAA761F2A84DFC700ACD7A0 /* XCRemoteSwiftPackageReference "Kingfisher" */;

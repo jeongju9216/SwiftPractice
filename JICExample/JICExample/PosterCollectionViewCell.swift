@@ -7,7 +7,6 @@
 
 import UIKit
 import Kingfisher
-import Jeongfisher
 
 class PosterCollectionViewCell: UICollectionViewCell {
     
@@ -45,7 +44,15 @@ class PosterCollectionViewCell: UICollectionViewCell {
         guard let url = URL(string: urlString) else { return }
         
 //        posterImageView.kf.setImage(with: url)
-        posterImageView.jf.setImage(with: url, options: [.downsamplingScale(1.5)])
+        
+        let symbolName = "circle.fill" // SF Symbol의 이름
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 24.0) // 포인트 크기 설정
+        let symbolImage = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
+
+        posterImageView.jf.setImage(with: url,
+                                    placeHolder: symbolImage,
+                                    waitPlaceHolderTime: 1,
+                                    options: [.downsamplingScale(1.5), .forceRefresh])
     }
     
     func cancelDownloadImage(urlString: String) {
