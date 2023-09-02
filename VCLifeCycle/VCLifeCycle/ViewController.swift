@@ -22,17 +22,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("A: \(#function)")
-        addView()
+        print("View: \(self.view)")
+        print("SafeArea: \(self.view.safeAreaLayoutGuide.layoutFrame)")
+//        addView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("A: \(#function)")
+        print("View: \(self.view)")
+        print("SafeArea: \(self.view.safeAreaLayoutGuide.layoutFrame)")
     }
     
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         print("A: \(#function)")
+        print("View: \(self.view)")
+        print("SafeArea: \(self.view.safeAreaLayoutGuide.layoutFrame)") // 바뀜
     }
     
     override func viewDidAppear(_ animated: Bool) {
