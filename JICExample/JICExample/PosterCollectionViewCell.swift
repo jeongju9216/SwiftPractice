@@ -45,17 +45,16 @@ class PosterCollectionViewCell: UICollectionViewCell {
         
 //        posterImageView.kf.setImage(with: url)
         
-        let symbolName = "circle.fill" // SF Symbol의 이름
-        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 24.0) // 포인트 크기 설정
-        let symbolImage = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
+//        let symbolName = "circle.fill" // SF Symbol의 이름
+//        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 24.0) // 포인트 크기 설정
+//        let symbolImage = UIImage(systemName: symbolName, withConfiguration: symbolConfig)
 
-        posterImageView.jf.setImage(with: url,
-                                    placeHolder: symbolImage,
-                                    waitPlaceHolderTime: 1,
-                                    options: [.downsamplingScale(1.5), .forceRefresh])
+        print("download")
+        posterImageView.jf.setImage(with: url, options: [.forceRefresh])
     }
     
-    func cancelDownloadImage(urlString: String) {
+    func cancelDownloadImage() {
+        print("cancel")
 //        posterImageView.kf.cancelDownloadTask()
         posterImageView.jf.cancelDownloadImage()
     }

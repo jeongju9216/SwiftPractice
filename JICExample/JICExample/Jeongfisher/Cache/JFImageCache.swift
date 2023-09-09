@@ -68,27 +68,24 @@ public class JFImageCache {
     public func getImageWithCache(url: URL, options: Set<JFOption>) async -> JFImageData? {
         let key = url.absoluteString
         
-        //메모리 캐시: 만료되었더라도 아직 정리되지 않았다면 다시 살림
-        if let memoryCacheData = memoryCache.getData(key: key) {
-            JFLogger.log("[ImageCache] Get Memory Cache")
-            return memoryCacheData.data
-        }
-        
-        //디스크 캐시: 만료된 데이터는 사용하지 않음
-        if !options.contains(.cacheMemoryOnly) {
-            if var diskCacheData = diskCache.getData(key: key) {
+        if !options.contains(.forceRefresh) {
+            //메모리 캐시: 만료되었더라도 아직 정리되지 않았다면 다시 살림
+            if let memoryCacheData = memoryCache.getData(key: key) {
+                return memoryCacheData.data
+            }
+            
+            //디스크 캐시: 만료된 데이터는 사용하지 않음
+            if !options.contains(.cacheMemoryOnly),
+               var diskCacheData = diskCache.getData(key: key) {
                 if !options.contains(.disableETag), let diskDataETag = diskCacheData.data.ETag {
                     do {
                         //ETag 확인
                         if let newImageData = try await downloadImage(url: url, etag: diskDataETag) {
                             //다르면 디스크 캐시에 새로운 데이터 저장
-                            JFLogger.log("[ImageCache] Get Disk Cache - Update New Data")
-
                             diskCacheData.data = newImageData
                             saveDiskCache(key: key, data: diskCacheData.data)
                         }
                     } catch JFNetworkError.notChangedETag {
-                        JFLogger.log("[ImageCache] Get Disk Cache - Same Data")
                     } catch {
                     }
                 }
@@ -101,9 +98,7 @@ public class JFImageCache {
         guard !options.contains(.onlyFromCache) else { return nil }
         
         //네트워크 다운로드
-        guard let imageData = try? await downloadImage(url: url) else {
-            return nil
-        }
+        guard let imageData = try? await downloadImage(url: url) else { return nil }
         
         JFImageCache.shared.saveImageData(url: url.absoluteString, imageData: imageData)
         return imageData

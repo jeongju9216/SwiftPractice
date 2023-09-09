@@ -32,8 +32,8 @@ class ViewController: UIViewController {
 
     //MARK: - Properties
 //    private let testItem: [String] = Array(repeating: "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/a2/dd/ea/a2ddea4f-15a1-6e56-50a4-cd71697e8c56/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/60x60bb.jpg", count: 100)
-    private let testItem: [String] = (500...600).map { "https://picsum.photos/\($0)" }
-//    private let testItem: [String] = Array(repeating: "https://picsum.photos/500", count: 100)
+//    private let testItem: [String] = (500...600).map { "https://picsum.photos/\($0)" }
+    private let testItem: [String] = Array(repeating: "https://picsum.photos/500", count: 100)
 
     //MARK: - Life Cycles
     override func viewDidLoad() {
@@ -83,7 +83,7 @@ extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? PosterCollectionViewCell else { return }
         
-        cell.cancelDownloadImage(urlString: testItem[indexPath.row])
+        cell.cancelDownloadImage()
     }
 }
 

@@ -28,15 +28,9 @@ public final actor JFImageDownloader: JFImageDownloadable {
     ///   - etag: 이미지 ETag
     /// - Returns: 이미지 다운로드 결과
     public func downloadImage(from url: URL, etag: String? = nil) async throws -> JFImageData {
-        count[url, default: 0] += 1
+        increaseCachedTaskCount(url: url)
         defer {
-            if count[url] != nil {
-                count[url]! -= 1
-                if count[url]! <= 0 {
-                    cache[url] = nil
-                    count[url] = nil
-                }
-            }
+            decreaseCachedTaskCount(url: url)
         }
         
         //이미 같은 URL 요청이 들어온 경우 Task 완료 대기
@@ -108,13 +102,28 @@ public final actor JFImageDownloader: JFImageDownloadable {
     /// - Parameter url: 취소할 이미지 URL
     public func cancelDownloadImage(url: URL) async {
         guard let cached = cache[url] else { return }
-        
+                
         switch cached {
         case .inProgress(let task):
             if !task.isCancelled {
                 task.cancel()
+                decreaseCachedTaskCount(url: url)
             }
         default: return
+        }
+    }
+    
+    private func increaseCachedTaskCount(url: URL) {
+        count[url, default: 0] += 1
+    }
+    
+    private func decreaseCachedTaskCount(url: URL) {
+        if count[url] != nil {
+            count[url]! -= 1
+            if count[url]! <= 0 {
+                cache[url] = nil
+                count[url] = nil
+            }
         }
     }
 }

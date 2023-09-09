@@ -39,9 +39,7 @@ extension JeongfisherWrapper where Base: UIImageView {
             if placeHolder != nil {
                 dispatchWorkItem = waitPlaceHolder(placeHolder, waitTime: waitPlaceHolderTime)
             }
-            defer {
-                dispatchWorkItem?.cancel()
-            }
+            defer { dispatchWorkItem?.cancel() }
                         
             guard let updatedImageData = await fetchImage(with: url, options: options) else {
                 updateImage(nil)
@@ -93,10 +91,6 @@ extension JeongfisherWrapper where Base: UIImageView {
     ///   - options: 적용할 JFOption
     /// - Returns: url 처리 결과
     private func fetchImage(with url: URL, options: Set<JFOption>) async -> JFImageData? {
-        guard !options.contains(.forceRefresh) else {
-            return try? await JFImageDownloader.shared.downloadImage(from: url)
-        }
-        
         return await JFImageCache.shared.getImageWithCache(url: url, options: options)
     }
     
