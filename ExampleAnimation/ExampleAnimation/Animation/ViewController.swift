@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
 //        animation() //animate
-        transition() //transition
+//        transition() //transition
 //        keyframe() //keyframe
 //        coreAnimation() //core animation
     }
