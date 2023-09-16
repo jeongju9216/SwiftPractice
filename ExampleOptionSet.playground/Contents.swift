@@ -1,11 +1,11 @@
 import UIKit
 
 struct Permissions: OptionSet {
+    let rawValue: Int
+
     static let read = Permissions(rawValue: 1 << 0)
     static let write = Permissions(rawValue: 1 << 1)
     static let execute = Permissions(rawValue: 1 << 2)
-
-    let rawValue: Int
 }
 
 

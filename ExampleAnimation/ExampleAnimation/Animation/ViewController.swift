@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-//        animation() //animate
+        animation() //animate
 //        transition() //transition
 //        keyframe() //keyframe
 //        coreAnimation() //core animation
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     func animation() {
 //        //frame 조절
 //        animateFrame1() //크기 변경
-//        animateFrame2() // 위치 변경
+        animateFrame2() // 위치 변경
 //
 //        //bounds 조절
 //        animateBounds1() //크기 변경

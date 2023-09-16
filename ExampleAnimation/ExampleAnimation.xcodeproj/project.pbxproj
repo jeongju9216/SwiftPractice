@@ -83,9 +83,9 @@
 			children = (
 				9B02A83C2AAC62A000DED9E3 /* ViewController.swift */,
 				9B3683AF2AAC7BF3004DDD1A /* ViewController+Animate.swift */,
+				9B3683BA2AACAC35004DDD1A /* ViewController+transition.swift */,
 				9B3683B12AAC7C2D004DDD1A /* ViewController+CoreAnimation.swift */,
 				9B3683B82AACAC16004DDD1A /* ViewController+Keyframes.swift */,
-				9B3683BA2AACAC35004DDD1A /* ViewController+transition.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
