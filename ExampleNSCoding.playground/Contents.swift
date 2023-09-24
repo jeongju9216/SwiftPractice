@@ -29,7 +29,7 @@ class Plane: NSObject, NSCoding {
     
     func display() {
         for shape in shapes {
-            print(type(of: shape))
+            print("\(type(of: shape)): \(shape.description)")
         }
     }
 }
@@ -43,7 +43,7 @@ class Shape: NSObject, NSCoding {
     let size: Size
     
     override var description: String {
-        return "\(point), \(size)"
+        return "Shape"
     }
     
     init(point: Point, size: Size) {
@@ -78,14 +78,10 @@ class Shape: NSObject, NSCoding {
 }
 
 final class Rect: Shape {
-    enum CodingKeys: String, CodingKey {
-        case text
-    }
-    
     private let text: String
     
     override var description: String {
-        "Rect\(super.description), Text:\(text)"
+        "Rect, Text: \(text)"
     }
     
     init(point: Point, size: Size, text: String) {
@@ -105,14 +101,10 @@ final class Rect: Shape {
 }
 
 final class Circle: Shape {
-    enum CodingKeys: String, CodingKey {
-        case color
-    }
-    
     private let color: String
     
     override var description: String {
-        "Circle\(super.description), Color:\(color)"
+        "Circle, Color: \(color)"
     }
     
     init(point: Point, size: Size, color: String) {
@@ -151,10 +143,10 @@ func unarchive(with text: Data) -> Plane? {
 }
 
 let shapes: [Shape] = [
-    Rect(point: .init(x: 10, y: 10), size: .init(width: 20, height: 20), text: "RECT1"),
-    Circle(point: .init(x: 30, y: 30), size: .init(width: 40, height: 40), color: "CIRCLE1"),
-    Rect(point: .init(x: 50, y: 50), size: .init(width: 60, height: 60), text: "RECT2"),
-    Circle(point: .init(x: 70, y: 70), size: .init(width: 80, height: 80), color: "CIRCLE2")
+    Rect(point: .init(x: 10, y: 10), size: .init(width: 20, height: 20), text: "Hello"),
+    Circle(point: .init(x: 30, y: 30), size: .init(width: 40, height: 40), color: "Red"),
+    Rect(point: .init(x: 50, y: 50), size: .init(width: 60, height: 60), text: "Jeong"),
+    Circle(point: .init(x: 70, y: 70), size: .init(width: 80, height: 80), color: "Blue")
 ]
 
 let plane = Plane(shapes: shapes)

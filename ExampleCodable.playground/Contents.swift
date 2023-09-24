@@ -20,7 +20,7 @@ class Plane: Codable {
     
     func display() {
         for shape in shapes {
-            print(type(of: shape))
+            print("\(type(of: shape)): \(shape.description)")
         }
     }
 }
@@ -32,6 +32,10 @@ class Shape: Codable {
     
     let point: Point
     let size: Size
+    
+    var description: String {
+        return "Shape"
+    }
     
     init(point: Point, size: Size) {
         self.point = point
@@ -59,6 +63,10 @@ final class Rect: Shape {
     
     private let text: String
     
+    override var description: String {
+        "Rect\(super.description), Text:\(text)"
+    }
+    
     init(point: Point, size: Size, text: String) {
         self.text = text
         super.init(point: point, size: size)
@@ -83,6 +91,10 @@ final class Circle: Shape {
     }
     
     private let color: String
+    
+    override var description: String {
+        "Circle\(super.description), Color:\(color)"
+    }
     
     init(point: Point, size: Size, color: String) {
         self.color = color
