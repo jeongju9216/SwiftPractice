@@ -53,7 +53,8 @@ final class CaptureView: UIView {
         
         let minSize = min(frame.width, frame.height - 132)
         previewView.pin
-            .aspectRatio(1).maxWidth(minSize).maxHeight(minSize)
+            .aspectRatio(1)
+            .maxHeight(minSize)
             .verticallyBetween(backButton, and: captureButton).hCenter()
             .align(.center)
     }
@@ -62,14 +63,13 @@ final class CaptureView: UIView {
     
     private func setUpSubviews() {
         addSubview(flexBox)
-        addSubview(previewView)
     }
     
     private func setUp() {
         flexBox.flex.direction(.column).define { flex in
             flex.addItem(backButton).size(Size.button)
             
-            flex.addItem().grow(1).backgroundColor(.systemGreen)
+            flex.addItem(previewView).grow(1)
             
             flex.addItem().alignItems(.center).justifyContent(.spaceBetween).direction(.row).define { flex in
                 flex.addItem(albumButton).size(Size.button)
