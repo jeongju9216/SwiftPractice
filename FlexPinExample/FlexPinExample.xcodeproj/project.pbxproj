@@ -18,6 +18,7 @@
 		9BB0A6642C0EB09200863A7E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 9BB0A6632C0EB09200863A7E /* Then */; };
 		9BB0A6662C0EB0A900863A7E /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0A6652C0EB0A900863A7E /* LayoutViewController.swift */; };
 		9BB0A6682C0EB0E900863A7E /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB0A6672C0EB0E900863A7E /* CaptureView.swift */; };
+		9BBA5CA62C0F036000F4375E /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBA5CA52C0F036000F4375E /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9BB0A6562C0EAFF500863A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB0A6652C0EB0A900863A7E /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		9BB0A6672C0EB0E900863A7E /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		9BBA5CA52C0F036000F4375E /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				9BB0A6482C0EAFF400863A7E /* AppDelegate.swift */,
 				9BB0A64A2C0EAFF400863A7E /* SceneDelegate.swift */,
 				9BB0A6672C0EB0E900863A7E /* CaptureView.swift */,
+				9BBA5CA52C0F036000F4375E /* EditView.swift */,
 				9BB0A64C2C0EAFF400863A7E /* ViewController.swift */,
 				9BB0A6652C0EB0A900863A7E /* LayoutViewController.swift */,
 				9BB0A64E2C0EAFF400863A7E /* Main.storyboard */,
@@ -162,6 +165,7 @@
 			files = (
 				9BB0A64D2C0EAFF400863A7E /* ViewController.swift in Sources */,
 				9BB0A6492C0EAFF400863A7E /* AppDelegate.swift in Sources */,
+				9BBA5CA62C0F036000F4375E /* EditView.swift in Sources */,
 				9BB0A6662C0EB0A900863A7E /* LayoutViewController.swift in Sources */,
 				9BB0A64B2C0EAFF400863A7E /* SceneDelegate.swift in Sources */,
 				9BB0A6682C0EB0E900863A7E /* CaptureView.swift in Sources */,
