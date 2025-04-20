@@ -31,6 +31,8 @@ actor TTSQueueManager {
     
     // 큐에 메시지 추가
     func enqueue(_ bubble: BubbleModel) {
+        guard bubble.type == .text else { return }
+
         queue.append(bubble)
         
         // 첫 메시지라면 로딩 및 재생 프로세스 시작
@@ -154,11 +156,13 @@ actor TTSQueueManager {
     
     // 메시지 여러 개 추가 (배열)
     func enqueueMultiple(_ bubbles: [BubbleModel]) async {
-        if queue.isEmpty && bubbles.count > 0 {
-            queue = bubbles
+        let textBubbles = bubbles.filter { $0.type == .text }
+        
+        if queue.isEmpty && !textBubbles.isEmpty {
+            queue = textBubbles
             startProcessing()
         } else {
-            queue.append(contentsOf: bubbles)
+            queue.append(contentsOf: textBubbles)
         }
     }
     

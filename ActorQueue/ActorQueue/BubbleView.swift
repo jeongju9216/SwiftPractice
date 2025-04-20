@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum BubbleType {
+
+    case text
+    case image
+}
+
 // 말풍선 모델
 enum Sender {
     
@@ -27,7 +33,20 @@ struct BubbleModel: Identifiable {
     let id = UUID()
     let content: String
     let sender: Sender
-    var state: BubbleState = .normal
+    let type: BubbleType
+    var state: BubbleState
+    
+    init(
+        content: String,
+        sender: Sender,
+        type: BubbleType = .text,
+        state: BubbleState = .normal
+    ) {
+        self.content = content
+        self.sender = sender
+        self.type = type
+        self.state = state
+    }
 }
 
 struct BubbleView: View {
@@ -47,40 +66,51 @@ struct BubbleView: View {
                     .cornerRadius(15)
                     .shadow(radius: 3)
             } else {
-                VStack(alignment: .leading, spacing: 4) {
-                    if bubble.state == .loading {
-                        Text("Loading...")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    } else if bubble.state == .waiting {
-                        Text("Waiting...")
-                            .font(.caption)
-                            .foregroundColor(.orange)
-                    } else if bubble.state == .playing {
-                        Text("Playing...")
-                            .font(.caption)
-                            .foregroundColor(.blue)
-                    }
-                    
-                    HStack {
-                        Text(bubble.content)
-                            .padding()
-                            .background(backgroundColorForState(bubble.state))
-                            .foregroundColor(.black)
-                            .cornerRadius(15)
-                            .shadow(radius: 3)
-                            .animation(.easeInOut(duration: 0.3), value: bubble.state)
-                        
-                        // 다시듣기 버튼
-                        Button(action: {
-                            onReplay(bubble)
-                        }) {
-                            Image(systemName: "speaker.wave.2.circle.fill")
-                                .font(.title2)
-                                .foregroundColor(isAnyBubbleLoading ? .gray : .blue)
+                if bubble.type == .text {
+                    VStack(alignment: .leading, spacing: 4) {
+                        if bubble.state == .loading {
+                            Text("Loading...")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        } else if bubble.state == .waiting {
+                            Text("Waiting...")
+                                .font(.caption)
+                                .foregroundColor(.orange)
+                        } else if bubble.state == .playing {
+                            Text("Playing...")
+                                .font(.caption)
+                                .foregroundColor(.blue)
                         }
-                        .disabled(isAnyBubbleLoading)
+                        
+                        HStack {
+                            Text(bubble.content)
+                                .padding()
+                                .background(backgroundColorForState(bubble.state))
+                                .foregroundColor(.black)
+                                .cornerRadius(15)
+                                .shadow(radius: 3)
+                                .animation(.easeInOut(duration: 0.3), value: bubble.state)
+                            
+                            // 다시듣기 버튼
+                            Button(action: {
+                                onReplay(bubble)
+                            }) {
+                                Image(systemName: "speaker.wave.2.circle.fill")
+                                    .font(.title2)
+                                    .foregroundColor(isAnyBubbleLoading ? .gray : .blue)
+                            }
+                            .disabled(isAnyBubbleLoading)
+                        }
                     }
+                } else {
+                    Image(systemName: "photo")  // 기본 이미지 아이콘
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                        .background(Color.white)
+                        .cornerRadius(15)
+                        .shadow(radius: 3)
+                        .padding()
                 }
                 Spacer()
             }

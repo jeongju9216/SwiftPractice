@@ -33,6 +33,16 @@ final class ChatViewModel: ObservableObject {
         ttsQueueManager = TTSQueueManager(viewModel: self)
     }
     
+    // 이미지 말풍선 추가 함수
+    func addImageBubble(sender: Sender) {
+        let imageBubble = BubbleModel(
+            content: "sample_image",  // 실제로는 이미지 식별자나 URL
+            sender: sender,
+            type: .image  // 이미지 타입으로 설정
+        )
+        bubbles.append(imageBubble)
+    }
+    
     // 메시지 전송 함수
     // sendMessage 함수 수정
     func sendMessage() async {
@@ -52,23 +62,34 @@ final class ChatViewModel: ObservableObject {
         let responseCount = Int.random(in: 2...4)
         var responses: [BubbleModel] = []
         
-        for _ in 0..<responseCount {
-            let responseText = self.autoResponses[self.autoResponseIndex]
-            self.autoResponseIndex = (self.autoResponseIndex + 1) % self.autoResponses.count
+        for i in 0..<responseCount {
+            // 랜덤으로 이미지 추가 (테스트용 - 약 30% 확률)
+            let isImage = Int.random(in: 1...10) <= 1
             
-            let response = BubbleModel(content: responseText, sender: .you)
-            bubbles.append(response)
-            responses.append(response)
+            if isImage {
+                // 이미지 말풍선 추가
+                addImageBubble(sender: .you)
+            } else {
+                // 텍스트 말풍선 추가
+                let responseText = self.autoResponses[self.autoResponseIndex]
+                self.autoResponseIndex = (self.autoResponseIndex + 1) % self.autoResponses.count
+                
+                let response = BubbleModel(content: responseText, sender: .you)
+                bubbles.append(response)
+                responses.append(response)
+            }
             
             // 연속 메시지 사이에 짧은 딜레이 추가
             try? await Task.sleep(nanoseconds: 300_000_000) // 0.3초 딜레이
         }
         
-        // 모든 메시지를 한번에 큐에 추가
+        // 텍스트 메시지들만 TTS 큐에 추가 (enqueueMultiple 내부에서 필터링됨)
         await ttsQueueManager.enqueueMultiple(responses)
     }
 
     func replayBubble(_ bubble: BubbleModel) async {
+        guard bubble.type == .text else { return }
+
         // 로딩 중인 버블이 있으면 재생 불가
         if isAnyBubbleLoading {
             return
